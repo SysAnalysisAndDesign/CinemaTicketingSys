@@ -17,4 +17,8 @@
         <property name="prefix" value="/WEB-INF/pages/"/> <!-- 所有jsp写在这里面 -->
         <property name="suffix" value=".jsp"/>
     </bean>
+
+    <mvc:resources mapping="/WEB-INF/static/**" location="/WEB-INF"/>
+
+    <mvc:default-servlet-handler />
 </beans>
