@@ -1,4 +1,4 @@
-package controller;
+package com.cinema_ticketing_sys.auth.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

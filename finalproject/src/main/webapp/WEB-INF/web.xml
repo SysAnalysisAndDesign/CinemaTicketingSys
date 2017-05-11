@@ -1,30 +1,51 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         metadata-complete="true" version="3.0">
+
+    <display-name>Cinema Ticketing System</display-name>
+
+    <!-- SpringMVC的配置文件 -->
+    <servlet>
+        <!-- 自定义名字  与xxxx-servlet.xml的xxx对应-->
+        <servlet-name>mvc-dispatcher</servlet-name>
+        <!-- 使⽤Spring MVC框架的类 -->
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <load-on-startup>1</load-on-startup>
+    </servlet>
+
+    <!-- servlet必须有对应的mapping匹配对应url -->
+    <servlet-mapping>
+        <servlet-name>mvc-dispatcher</servlet-name>
+        <!-- ⽤于拦截请求（url-pattern为 / ，说明拦截所有请求），并交由Spring MVC的后台控制器来处理。这⼀项配置是必须的。-->
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
 
 
-<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/
-web-app_3_1.xsd"
-          version="3.1">
 
-  <display-name>Archetype Created Web Application</display-name>
+    <!-- Spring的配置文件 -->
+    <context-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>classpath:/META-INF/applicationContext.xml</param-value>
+    </context-param>
 
-  <servlet>
-    <servlet-name>mvc-dispatcher</servlet-name> <!-- 自定义名字  与xxxx-servlet.xml的xxx对应-->
-    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class> <!-- 使⽤Spring MVC框架的类 -->
-    <!--  <init-param>
-          <param-name>contextConfigLocation</param-name>
-          <param-value>/WEB-INF/mvc-dispatcher-servlet.xml</param-value>
-      </init-param> -->
-      <load-on-startup>1</load-on-startup>
-  </servlet>
+    <!-- Spring监听器 -->
+    <listener>
+        <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+    </listener>
 
-  <servlet-mapping> <!--servlet必须有对应的mapping匹配对应url -->
-    <servlet-name>mvc-dispatcher</servlet-name>
-    <url-pattern>/</url-pattern> <!-- ⽤于拦截请求（url-pattern为 / ，说明拦截所有请求），并交由Spring MVC的后台控制器来处理。这⼀项配置是必须的。 -->
-  </servlet-mapping>
+
+
+    <!-- Hibernate Filter -->
+    <filter>
+        <filter-name>hibernateFilter</filter-name>
+        <filter-class>org.springframework.orm.hibernate5.support.OpenSessionInViewFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>hibernateFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
 
     <!-- 为了能够处理中⽂的post请求，配置⼀个encodingFilter（），避免post请求中⽂时出现乱码的情况 -->
     <filter>
@@ -44,4 +65,15 @@ web-app_3_1.xsd"
         <filter-name>encondingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+
+    <!--Spring安全-->
+    <filter>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>springSecurityFilterChain</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
 </web-app>

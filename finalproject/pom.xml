@@ -111,13 +111,30 @@
             <version>5.1.2.Final</version>
         </dependency>
 
-      <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
-      <dependency>
-          <groupId>javax.servlet</groupId>
-          <artifactId>jstl</artifactId>
-          <version>1.2</version>
-      </dependency>
+        <dependency>
+            <groupId>c3p0</groupId>
+            <artifactId>c3p0</artifactId>
+            <version>0.9.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>6.0.6</version>
+        </dependency>
 
+        <!-- https://mvnrepository.com/artifact/javax.servlet/jstl -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jstl</artifactId>
+            <version>1.2</version>
+        </dependency>
+
+        <!-- 添加日志相关jar包 -->
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>1.2.17</version>
+        </dependency>
 
   </dependencies>
 
