@@ -18,10 +18,10 @@
         <property name="jdbcUrl" value="${url}"></property>
         <property name="user" value="${username}"></property>
         <property name="password" value="${password}"></property>
-        <property name="maxPoolSize" value="${maxPoolSize}"></property>
-        <property name="minPoolSize" value="${minPoolSize}"></property>
-        <property name="initialPoolSize" value="${initialPoolSize}"></property>
-        <property name="maxIdleTime" value="${maxIdleTime}"></property>
+        <property name="maxPoolSize" value="40"></property>
+        <property name="minPoolSize" value="1"></property>
+        <property name="initialPoolSize" value="1"></property>
+        <property name="maxIdleTime" value="20"></property>
     </bean>
 
     <!-- session工厂 -->
@@ -43,7 +43,7 @@
     </bean>
 
     <!-- 启动Spring Annotation注解功能管理事务 -->
-    <tx:annotation-driven transaction-manager="transactionManager"/>
+    <tx:annotation-driven proxy-target-class="true" transaction-manager="transactionManager"/>
 
     <!-- 配置事务传播特性 -->
     <tx:advice id="txAdvice" transaction-manager="transactionManager">

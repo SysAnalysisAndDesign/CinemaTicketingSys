@@ -13,6 +13,7 @@
         <property name="show_sql">true</property>
         <property name="format_sql">true</property>
         <property name="id.new_generator_mappings">false</property>
+        <property name="connection.autocommit">true</property>
 
         <property name="use_outer_join">true</property>
         <property name="max_fetch_depth">3</property>
@@ -25,13 +26,13 @@
         <property name="cache.use_query_cache">true</property>
         <property name="generate_statistics">true</property>
         <property name="cache.provider_configuration_file_resource_path">classpath:/META_INF/conf/ehcache.xml</property>
-        <mapping class="com.cinema_ticketing_sys.bought_seat.entity.BoughtSeatEntity"/>
-        <mapping class="com.cinema_ticketing_sys.cinema.entity.CinemaEntity"/>
-        <mapping class="com.cinema_ticketing_sys.comment.entity.CommentEntity"/>
-        <mapping class="com.cinema_ticketing_sys.movie.entity.MovieEntity"/>
-        <mapping class="com.cinema_ticketing_sys.movie_cutting.entity.MovieCuttingEntity"/>
-        <mapping class="com.cinema_ticketing_sys.order.entity.OrderEntity"/>
-        <mapping class="com.cinema_ticketing_sys.user.entity.UserEntity"/>
+        <mapping class="com.cinema_ticketing_sys.bought_seat.entity.BoughtSeat"/>
+        <mapping class="com.cinema_ticketing_sys.cinema.entity.Cinema"/>
+        <mapping class="com.cinema_ticketing_sys.comment.entity.Comment"/>
+        <mapping class="com.cinema_ticketing_sys.movie.entity.Movie"/>
+        <mapping class="com.cinema_ticketing_sys.movie_cutting.entity.MovieCutting"/>
+        <mapping class="com.cinema_ticketing_sys.order.entity.Order"/>
+        <mapping class="com.cinema_ticketing_sys.user.entity.User"/>
 
         <!--Entity-->
         <!--使用spring-hibernate.xml的packageToScan进行自动扫描-->
