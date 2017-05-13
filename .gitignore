@@ -1,0 +1,14 @@
+*.class
+*.jar
+
+.idea/
+*.iml
+
+target/
+
+out/
+classes/
+
+.DS_Store
+
+logs/
