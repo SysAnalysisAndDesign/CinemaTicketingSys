@@ -11,7 +11,8 @@
     <title>用户注册</title>
 </head>
 <body>
-<form action="/register.do" method="post">
+<h1 align="center">用户注册</h1>
+<form method="post">
     <table>
         <tr>
             <td>用户名：</td>
@@ -27,7 +28,7 @@
         </tr>
         <tr>
             <td>手机：</td>
-            <td><input type="tel" name="phone"/></td>
+            <td><input type="tel" name="phone_number"/></td>
         </tr>
         <tr>
             <td colspan="2" align="center">

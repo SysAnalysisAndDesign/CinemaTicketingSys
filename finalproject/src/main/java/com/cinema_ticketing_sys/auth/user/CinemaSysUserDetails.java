@@ -27,6 +27,8 @@ public class CinemaSysUserDetails implements UserDetails {
     public Collection<? extends GrantedAuthority> getAuthorities() {
         Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
         grantedAuthorities.add(new SimpleGrantedAuthority(rolePrefix + "USER"));
+        grantedAuthorities.add(new SimpleGrantedAuthority(rolePrefix + "ANONYMOUS"));
+
         return grantedAuthorities;
     }
 

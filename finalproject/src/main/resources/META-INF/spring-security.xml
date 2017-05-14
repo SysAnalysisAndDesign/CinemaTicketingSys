@@ -19,10 +19,12 @@
                     always-use-default-target="true"
                     username-parameter="username"
                     password-parameter="password"/>
+        <intercept-url pattern="/*"
+                       access="hasRole('ROLE_ANONYMOUS')"/>
         <intercept-url pattern="/**"
                        access="hasRole('ROLE_USER')"/>
-        <!--<csrf disabled="true"/>
-        <logout logout-url="/logout.do"/>-->
+        <csrf disabled="true"/>
+        <logout logout-url="/logout.do" logout-success-url="/"/>
     </http>
 
     <authentication-manager>

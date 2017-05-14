@@ -60,6 +60,8 @@ public class UserServiceImpl implements UserService {
         }
         String username = (String) userInfo.get("username");
         String password = (String) userInfo.get("password");
+        String email = (String) userInfo.get("email");
+        String phone_number = (String) userInfo.get("phone_number");
         if (username == null || username.isEmpty()) {
             registerFail(callback, "用户名不能为空");
             return null;
@@ -75,6 +77,9 @@ public class UserServiceImpl implements UserService {
         User user = new User();
         user.setUserName(username);
         user.setPassword(password);
+        user.setEmail(email);
+        user.setPhoneNumber(phone_number);
+        user.setEnable(true);
         return user;
     }
 

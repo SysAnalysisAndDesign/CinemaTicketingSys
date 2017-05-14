@@ -7,7 +7,9 @@ import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -23,16 +25,21 @@ public class RegisterController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping("")
-    public String register() {
+    @RequestMapping(method = RequestMethod.GET)
+    public String registerForm() {
+        return "register";
+    }
+
+    @RequestMapping(method = RequestMethod.POST)
+    public String register(HttpServletRequest request) {
         Map<String, Object> userInfo = new HashMap<>();
-        userInfo.put("username", "huitr");
-        userInfo.put("password", "123456");
+        userInfo.put("username", request.getParameter("username"));
+        userInfo.put("password", request.getParameter("password"));
         userInfo.put("balance", 0);
         userInfo.put("portrait", null);
-        userInfo.put("email", "huitianrui@gmail.com");
-        userInfo.put("phone", "123456");
-        userInfo.put("enable", (byte) 1);
+        userInfo.put("email", request.getParameter("email"));
+        userInfo.put("phone_number", request.getParameter("phone_number"));
+        userInfo.put("enable", false);
         userService.register(userInfo, new UserRegisterCallback() {
             @Override
             public void onRegisterFail(String msg) {
@@ -44,7 +51,6 @@ public class RegisterController {
                 logger.info("用户[" + user.getUserName() + "]注册成功！");
             }
         });
-        userService.deleteUserById(2);
-        return "login";
+        return "redirect:/login";
     }
 }
