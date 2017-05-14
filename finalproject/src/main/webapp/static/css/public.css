@@ -1,0 +1,53 @@
+/*this are the public styles which exists in every file with .jsp*/
+body, textarea, select, input
+{
+    font-family: "Arial","Hiragino Sans GB", \5fae\8f6f\96c5\9ed1, "Helvetica", "sans-serif";
+    font-size: 14px;
+    line-height: 21px;
+    color: #343d42;
+    outline: none;
+    border: 0;
+    background-color: #9d9d9d;
+}
+fieldset, img, html, body, iframe
+{
+    border: 0;
+}
+a {
+    color: #859295;
+    text-decoration: none;
+}
+a, button {
+    cursor: pointer;
+}
+/*.navbar-fixed-top
+{
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    background: url(/images/black_back.png) repeat-x;
+}
+.navbar-fixed-top .container
+{
+    width: 1205px;
+    margin: 0 auto;
+    text-align: left;
+}*/
+.jumbotron
+{
+    margin-top: 30px;
+}
+.jumbotron .form-control
+{
+    height: 50px;
+    width: 850px;
+    margin: 0 0 0 28%;
+}
+.jumbotron .btn-success
+{
+    padding: 12px 16px 13px 16px;
+    margin: -50px 99% -40px 1100px;
+}
+.jumbotron .searchInput
+{
+    text-align: center;
+    margin-top: 10%;
+}
