@@ -13,5 +13,5 @@ public interface CinemaService {
     void updateCinemaRate(int rate, Cinema cinema);
 
     List<Cinema> findCinemaByRate(int rate);
-    
+
 }
