@@ -7,7 +7,7 @@ import com.cinema_ticketing_sys.support.utils.StringUtils;
 
 
 /**
- * Created by Lenovo on 2017/5/17.
+ * Created by KC on 2017/5/17.
  */
 public class MovieServiceImpl implements MovieService {
 
