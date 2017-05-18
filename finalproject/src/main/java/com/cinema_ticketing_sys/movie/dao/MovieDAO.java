@@ -21,5 +21,5 @@ public interface MovieDAO {
      */
     Movie findMovieByName(String name);
 
-//    boolean checkMoiveInfo(String name, String description, double price)
+
 }

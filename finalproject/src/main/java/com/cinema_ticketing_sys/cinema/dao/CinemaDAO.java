@@ -38,6 +38,4 @@ public interface CinemaDAO {
      */
     void saveOrUpdateCinema(Cinema cinema);
 
- //   boolean checkCinemaInfo(String cinemaName, String address, String description, int rate, CreationCallback)
-
 }
