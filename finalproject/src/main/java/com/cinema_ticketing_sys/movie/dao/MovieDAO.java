@@ -20,6 +20,5 @@ public interface MovieDAO {
      * @return 返回电影实体
      */
     Movie findMovieByName(String name);
-
-
+    
 }
