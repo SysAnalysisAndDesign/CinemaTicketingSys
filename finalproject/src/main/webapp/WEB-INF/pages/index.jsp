@@ -20,11 +20,6 @@
 <c:choose>
     <c:when test="${pageContext.request.userPrincipal.authenticated}">
         <h1>Hello, ${pageContext.request.userPrincipal.name}</h1>
-        <br>
-        手机号：<%= pageContext.getRequest().getAttribute("phone_number")%>
-        <br>
-        邮箱：<%= pageContext.getRequest().getAttribute("email")%>
-
     </c:when>
     <c:otherwise>
         <h1>Hello, please login</h1>
