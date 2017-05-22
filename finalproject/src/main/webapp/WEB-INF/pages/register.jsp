@@ -19,22 +19,27 @@
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-theme.css">
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <script src="/static/scripts/jquery-3.1.1.min.js"></script>
+    <script src="/static/scripts/jquery-validation/jquery.validate.min.js"></script>
+
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="/static/scripts/register.js"></script>
+
     <title>用户注册</title>
 </head>
 <body>
 <div class="container content">
     <div class="main">
-        <form action="login.do" method="post" role="form">
+        <form id="regForm" method="post" role="form">
             <span class="form-header">注册</span>
-            <input type="text" name="username" class="form-control inputType" placeholder="用户名" required autofocus>
+            <input type="text" name="username" id="username" class="form-control inputType" placeholder="用户名">
 
             <input type="text" name="phone_number" class="form-control inputType" placeholder="手机号">
             <input type="text" name="email" class="form-control inputType" placeholder="邮箱">
-            <input type="password" name="password" class="form-control inputType" placeholder="密码" required>
-            <input type="password" name="passwordConfirm" class="form-control inputType" placeholder="确认密码" required>
-            <button class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
+            <input type="password" name="password" id="password" class="form-control inputType" placeholder="密码">
+            <input type="password" name="passwordConfirm" id="rpassword" class="form-control inputType" placeholder="确认密码">
+            <button id="regbtn" class="btn btn-lg btn-primary btn-block" type="submit">注册</button>
         </form>
         <span class="reg">已有账号？<a href="login">点我登录</a></span>
     </div>
