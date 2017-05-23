@@ -31,7 +31,6 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-    <!--增加对静态资源的处理-->
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>/static/*</url-pattern>
@@ -47,12 +46,14 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
 
+
     <!-- servlet必须有对应的mapping匹配对应url -->
     <servlet-mapping>
         <servlet-name>mvc-dispatcher</servlet-name>
         <!-- ⽤于拦截请求（url-pattern为 / ，说明拦截所有请求），并交由Spring MVC的后台控制器来处理。这⼀项配置是必须的。-->
         <url-pattern>/</url-pattern>
     </servlet-mapping>
+
 
 
     <!-- Hibernate Filter -->

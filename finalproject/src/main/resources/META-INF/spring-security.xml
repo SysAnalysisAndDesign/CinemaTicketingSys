@@ -8,9 +8,12 @@
 	    http://www.springframework.org/schema/security/spring-security-4.1.xsd">
 
     <!--配置不需要权限的资源[静态资源]-->
+    <http pattern="/static/**" security="none"/>
+
+
     <http pattern="/login" security="none"/>
     <http pattern="/register" security="none"/>
-    <http pattern="/static/**" security="none"/>
+    <http pattern="/index" security="none"/>
 
     <!--该url供给客户端调用，不使用spring security进行安全检验，使用拦截器+代码验证-->
     <!--<http pattern="/auth/**" security="none"/>-->
