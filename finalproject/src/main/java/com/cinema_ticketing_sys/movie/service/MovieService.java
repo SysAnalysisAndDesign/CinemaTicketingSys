@@ -7,7 +7,6 @@ import com.cinema_ticketing_sys.support.interfaces.CreationCallback;
  * Created by Lenovo on 2017/5/17.
  */
 public interface MovieService {
-
     /**
      * 通过名字查询电影
      * @param Name 电影名
