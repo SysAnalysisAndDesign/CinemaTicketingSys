@@ -5,13 +5,19 @@ import com.cinema_ticketing_sys.cinema.entity.Cinema;
 import com.cinema_ticketing_sys.support.interfaces.CreationCallback;
 import com.cinema_ticketing_sys.support.utils.NumUtils;
 import com.cinema_ticketing_sys.support.utils.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 /**
  * Created by KC on 2017/5/15.
  */
+@Service
+@Transactional
 public class CinemaServiceImpl implements CinemaService {
+    @Autowired
     private CinemaDAO cinemaDAO;
 
     @Override
@@ -43,5 +49,14 @@ public class CinemaServiceImpl implements CinemaService {
         return true;
     }
 
+    @Override
+    public List<Cinema> findCinemaByPage(Integer pageNo, Integer pageSize) {
+        return cinemaDAO.findCinemaByPage(pageNo, pageSize);
+    }
+
+    @Override
+    public long findCinemaCount(Class<Cinema> cinemaClass) {
+        return cinemaDAO.findCinemaCount(cinemaClass);
+    }
 
 }

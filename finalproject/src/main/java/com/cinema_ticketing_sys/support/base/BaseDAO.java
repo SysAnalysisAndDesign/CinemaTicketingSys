@@ -20,7 +20,9 @@ public interface BaseDAO<T> {
 
     List<T> findAll();
 
-    List<T> findByPage(Integer start, Integer rows);
+    long findCount(Class<T> entityClazz);
+
+    List<T> findByPage(Integer pageNo, Integer pageSize);
 
     T findByUnique(String propertyName, Object value);
 

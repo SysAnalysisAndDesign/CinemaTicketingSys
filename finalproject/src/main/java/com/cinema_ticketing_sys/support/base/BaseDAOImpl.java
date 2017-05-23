@@ -92,17 +92,35 @@ public abstract class BaseDAOImpl<T> implements BaseDAO<T> {
     }
 
     /**
+     * 获取实体总数
+     * @param entityClazz 实体类型
+     * @return 实体总数
+     */
+    public long findCount(Class<T> entityClazz)
+    {
+        List<?> l = find("select count(*) from "
+                + entityClazz.getSimpleName());
+        // 返回查询得到的实体总数
+        if (l != null && l.size() == 1 )
+        {
+            return (Long) l.get(0);
+        }
+        return 0;
+    }
+
+    /**
      * 根据分页参数获取对象
      *
-     * @param start 起始行数
-     * @param rows  每页显示的行数
+     * @param pageNo 查询第几页
+     * @param pageSize 每页显示的行数
      * @return
      */
     @Override
-    public List<T> findByPage(Integer start, Integer rows) {
+    public List<T> findByPage(Integer pageNo, Integer pageSize) {
         Criteria c = getCurrentSession().createCriteria(getEntityClass());
-        c.setFirstResult(start);
-        c.setMaxResults(rows);
+        // 执行分页
+        c.setFirstResult((pageNo - 1) * pageSize);
+        c.setMaxResults(pageSize);
         return c.list();
     }
 
