@@ -1,12 +1,28 @@
-
-finalproject/.idea/
-
-finalproject/target/classes/META-INF/
+*.class
+*.jar
 
 .idea/
+*.iml
 
-finalproject/finalproject.iml
+target/
 
-finalproject/classes/artifacts/finalproject_war_exploded/
+out/
+classes/
 
-finalproject/target/classes/com/cinema_ticketing_sys
+.DS_Store
+
+logs/
+
+finalproject/src/main/webapp/static
+
+finalproject/src/main/webapp
+
+finalproject/src/main/resources/META-INF/sql
+
+finalproject/src/main/resources/META-INF/properties/hibernate.properties
+
+finalproject/src/main/webapp/static/bootstrap
+
+finalproject/src/main/webapp/static/bootstrap
+
+finalproject/src/main/webapp/static/images
