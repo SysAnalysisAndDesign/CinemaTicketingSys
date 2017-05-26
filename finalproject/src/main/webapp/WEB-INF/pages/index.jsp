@@ -6,14 +6,21 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<<<<<<< HEAD
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <html>
 
+=======
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<html>
+>>>>>>> origin/develop
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge"> <!-- 看到IE我就怕 -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
+<<<<<<< HEAD
         <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="/static/css/public.css">
     <!-- 可选的Bootstrap主题文件（一般不用引入） -->
@@ -198,6 +205,20 @@
     <p>www.Clown-Movie.com.cn</p>
     <p>Clown-Movie版权所有</p>
 </div>
+=======
+    <title>CSC</title>
+    <!-- 文档中有提到css 我就不搞了 -->
+</head>
+<body>
+<c:choose>
+    <c:when test="${pageContext.request.userPrincipal.authenticated}">
+        <h1>Hello, ${pageContext.request.userPrincipal.name}</h1>
+    </c:when>
+    <c:otherwise>
+        <h1>Hello, please login</h1>
+    </c:otherwise>
+</c:choose>
+>>>>>>> origin/develop
 
 </body>
 </html>
