@@ -18,7 +18,6 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-<<<<<<< HEAD
     <mvc:resources mapping="/static/*" location="/static/"/>
 
 <!--    <mvc:resources mapping="/bootstrap/**" location="/bootstrap/" />
@@ -28,9 +27,4 @@
 
 
     <mvc:default-servlet-handler/>
-=======
-    <mvc:resources mapping="/WEB-INF/static/**" location="/WEB-INF"/>
-
-    <mvc:default-servlet-handler />
->>>>>>> origin/develop
 </beans>
