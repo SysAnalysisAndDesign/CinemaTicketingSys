@@ -12,8 +12,3 @@ classes/
 .DS_Store
 
 logs/
-
-finalproject/src/main/resources/META-INF/sql
-
-finalproject/src/main/resources/META-INF/properties/hibernate.properties
-
