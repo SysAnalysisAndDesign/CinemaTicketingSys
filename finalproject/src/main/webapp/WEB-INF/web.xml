@@ -31,10 +31,6 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
-<<<<<<< HEAD
-=======
-    <!--增加对静态资源的处理-->
->>>>>>> origin/develop
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>/static/*</url-pattern>
@@ -50,10 +46,7 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/develop
     <!-- servlet必须有对应的mapping匹配对应url -->
     <servlet-mapping>
         <servlet-name>mvc-dispatcher</servlet-name>
@@ -62,10 +55,7 @@
     </servlet-mapping>
 
 
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/develop
     <!-- Hibernate Filter -->
     <filter>
         <filter-name>hibernateFilter</filter-name>
