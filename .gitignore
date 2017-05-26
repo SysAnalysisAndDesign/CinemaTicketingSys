@@ -13,14 +13,9 @@ classes/
 
 logs/
 
-finalproject/src/main/webapp/static
-
 finalproject/src/main/webapp
 
 finalproject/src/main/resources/META-INF/sql
 
 finalproject/src/main/resources/META-INF/properties/hibernate.properties
 
-finalproject/src/main/webapp/static/bootstrap
-
-finalproject/src/main/webapp/static/images
