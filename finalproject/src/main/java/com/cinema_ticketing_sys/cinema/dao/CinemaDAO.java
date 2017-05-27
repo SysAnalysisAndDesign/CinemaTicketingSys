@@ -30,6 +30,7 @@ public interface CinemaDAO {
      * @return 系列影院
      */
     List<Cinema> findCinemaByRate(int rate);
+
     /**
      * 更新影院内容
      *
@@ -37,5 +38,20 @@ public interface CinemaDAO {
      *
      */
     void saveOrUpdateCinema(Cinema cinema);
+
+    /**
+     * 对影院进行分页查询
+     * @param pageNo 查询第几页
+     * @param pageSize 每页的记录条数
+     * @return
+     */
+    List<Cinema> findCinemaByPage(Integer pageNo, Integer pageSize);
+
+    /**
+     * 查询Cinema记录的总数
+     * @param cinemaClass
+     * @return
+     */
+    long findCinemaCount(Class<Cinema> cinemaClass);
 
 }

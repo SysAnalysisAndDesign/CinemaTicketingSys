@@ -39,4 +39,19 @@ public interface CinemaService {
      * @return 完整且不重复返回true，否则false，没有callback不会写（。
      */
     boolean checkCinemaInfo(String cinemaName, String address, String description, int rate, CreationCallback<Cinema> callback);
+
+    /**
+     * 对影院进行分页查询
+     * @param pageNo
+     * @param pageSize
+     * @return
+     */
+    List<Cinema> findCinemaByPage(Integer pageNo, Integer pageSize);
+
+    /**
+     * 查询影院记录的总数
+     * @param cinemaClass
+     * @return
+     */
+    long findCinemaCount(Class<Cinema> cinemaClass);
 }

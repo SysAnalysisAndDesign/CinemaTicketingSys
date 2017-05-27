@@ -8,33 +8,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-<<<<<<< HEAD
-    <title>用户登录</title>
-</head>
-<body>
-<h1>自定义登录页面</h1>
-<form action="login.do" method="post">
-    <table>
-        <tr>
-            <td>用户名：</td>
-            <td><input type="text" name="username"/></td>
-        </tr>
-        <tr>
-            <td>密码：</td>
-            <td><input type="password" name="password"/></td>
-        </tr>
-        <tr>
-            <td colspan="2" align="center">
-                <input type="submit" value="登录"/>
-                <input type="reset" value="重置"/>
-            </td>
-        </tr>
-    </table>
-</form>
-
-</body>
-</html>
-=======
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -70,4 +43,3 @@
 
 </body>
 </html>
->>>>>>> origin/KC

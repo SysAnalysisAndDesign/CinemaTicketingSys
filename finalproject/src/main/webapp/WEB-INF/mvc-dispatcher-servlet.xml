@@ -18,19 +18,7 @@
         <property name="suffix" value=".jsp"/>
     </bean>
 
-<<<<<<< HEAD
-    <mvc:resources mapping="/static/*" location="/static/"/>
-
-<!--    <mvc:resources mapping="/bootstrap/**" location="/bootstrap/" />
-    <mvc:resources mapping="/css/**" location="/css/" />
-    <mvc:resources mapping="/scripts/**" location="/scripts/" />
-    <mvc:resources mapping="/images/**" location="/images/" />-->
-
-
-    <mvc:default-servlet-handler/>
-=======
     <mvc:resources mapping="/WEB-INF/static/**" location="/WEB-INF"/>
 
     <mvc:default-servlet-handler />
->>>>>>> origin/KC
 </beans>
