@@ -22,7 +22,7 @@ public class CinemaController {
     private CinemaService cinemaService;
 
     @RequestMapping()
-    public String getAllCinemas(int pageNo, int pageSize, ModelMap modelMap) {
+    public String getAllCinemas(Integer pageNo, Integer pageSize, ModelMap modelMap) {
         List<Cinema> cinemas = new ArrayList<>();
         cinemas = cinemaService.findCinemaByPage(pageNo, pageSize);
         long totalCinemas = cinemaService.findCinemaCount(Cinema.class);
@@ -32,7 +32,7 @@ public class CinemaController {
         cinemaPage.setCurrPage(pageNo);
         cinemaPage.setPageSize(pageSize);
         cinemaPage.setTotalCount((int)totalCinemas);
-        cinemaPage.setTotalPage((int)totalCinemas / pageSize + 1);
+        cinemaPage.setTotalPage((int)Math.ceil((double) totalCinemas / pageSize));
 
         // ModelMap用来存储Controller处理后的数据
         // Controller将ModelMap发送到前端供JSP页面使用
