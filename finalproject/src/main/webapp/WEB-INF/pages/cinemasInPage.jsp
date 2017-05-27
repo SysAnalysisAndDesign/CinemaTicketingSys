@@ -10,11 +10,18 @@
 <html>
 <head>
     <title>所有影院</title>
+    <link rel="stylesheet" href="/static/css/public.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <script src="/static/scripts/jquery-3.1.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"
+            integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB"
+            crossorigin="anonymous"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/static/scripts/jquery.twbsPagination.js" type="text/javascript"></script>
 </head>
 <body>
-
-<!-- 最下面显示跳转页面 -->
-<!-- ${cinemaPage.totalCount }总的记录条数  其他的类似，与Page.java相关联 -->
 
 <c:forEach items="${cinemaPage.list}" var="cinema">
     <tr>
@@ -26,35 +33,29 @@
     <br/>
 </c:forEach>
 
-<div>
-
-    共 <i class="blue">${cinemaPage.totalCount }</i>
-    条记录，当前显示第 <i class="blue">${cinemaPage.currPage }
-</i> 页 / 共 <i class="blue">${cinemaPage.totalPage }</i> 页
-    跳转
-    <input type="text" class="scinput"
-           style="width: 40px;height: 20px" id="currPage2" onblur="page2()"
-           onkeyup="this.value=this.value.replace(/\D/g,'')"
-           onafterpaste="this.value=this.value.replace(/\D/g,'')" />  页
-
-    <!-- 首页按钮，跳转到首页 -->
-    <p>  <c:if test="${cinemaPage.currPage <= 1 }"></c:if>
-        <a href="javascript:;" <c:if test="${cinemaPage.currPage > 1 }">onclick="page1(1)"</c:if> >首页</a>
-
-
-        <!-- 上页按钮，跳转到上一页 -->
-        <c:if test="${cinemaPage.currPage <= 1 }"></c:if>
-        <a href="javascript:;" <c:if test="${cinemaPage.currPage > 1 }">onclick="page1('${cinemaPage.currPage - 1}')"</c:if> >上页</a>
-
-        <!-- 下页按钮，跳转到下一页 -->
-        <c:if test="${cinemaPage.currPage >= cinemaPage.totalPage }"></c:if>
-        <a href="javascript:;" <c:if test="${cinemaPage.currPage < cinemaPage.totalPage }">onclick="page1('${cinemaPage.currPage + 1}')"</c:if> >下页</a>
-
-        <!-- 末页按钮，跳转到最后一页 -->
-        <c:if test="${cinemaPage.currPage >= cinemaPage.totalPage }"></c:if>
-        <a href="javascript:;" <c:if test="${cinemaPage.currPage < cinemaPage.totalPage }">onclick="page1('${cinemaPage.totalPage}')"</c:if> >末页</a>
-    </p>
+<div class="container">
+    <nav aria-label="Page navigation">
+        <ul class="pagination" id="pagination"></ul>
+    </nav>
 </div>
+
+<script type="text/javascript">
+    $(function () {
+        $('#pagination').twbsPagination({
+            totalPages: ${cinemaPage.totalPage},
+            visiblePages: 5,
+            first: "首页",
+            prev: "上一页",
+            next: "下一页",
+            last: "末页",
+            initiateStartPageClick: false,
+            startPage: ${cinemaPage.currPage},
+            onPageClick: function (event, page) {
+                window.location.href="http://localhost:8080/cinemas?pageNo=" + page + "&pageSize=2";
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
