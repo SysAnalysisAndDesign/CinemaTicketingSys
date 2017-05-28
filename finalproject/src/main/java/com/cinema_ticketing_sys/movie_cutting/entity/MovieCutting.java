@@ -4,6 +4,8 @@ import com.cinema_ticketing_sys.bought_seat.entity.BoughtSeat;
 import com.cinema_ticketing_sys.movie.entity.Movie;
 
 import javax.persistence.*;
+import java.sql.Date;
+import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.HashSet;
 import java.util.Set;
@@ -15,7 +17,8 @@ import java.util.Set;
 @Table(name = "movie_cutting", schema = "cinema_ticketing_db")
 public class MovieCutting {
     private int movieCuttingId;
-    private Timestamp startTime;
+    private Time startTime;
+    private Date startDate;
     private Integer length;
     private Integer hallNumber;
 
@@ -57,12 +60,22 @@ public class MovieCutting {
     }
 
     @Basic
+    @Column(name = "start_date")
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+
+    @Basic
     @Column(name = "start_time")
-    public Timestamp getStartTime() {
+    public Time getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(Timestamp startTime) {
+    public void setStartTime(Time startTime) {
         this.startTime = startTime;
     }
 

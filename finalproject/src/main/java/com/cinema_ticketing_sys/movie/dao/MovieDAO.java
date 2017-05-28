@@ -12,7 +12,7 @@ public interface MovieDAO {
      * @param id 电影对应数据库id
      * @return 对应电影实体
      */
-    Movie findMoiveById(int id);
+    Movie findMovieById(int id);
 
     /**
      * 根据电影名查找电影
