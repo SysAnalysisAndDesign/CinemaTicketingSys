@@ -21,6 +21,9 @@ public class CinemaServiceImpl implements CinemaService {
     private CinemaDAO cinemaDAO;
 
     @Override
+    public Cinema findCinemaById(int cinemaId) { return cinemaDAO.findCinemaById(cinemaId); }
+
+    @Override
     public Cinema findCinemaByName(String name) {
         return cinemaDAO.findCinemaByName(name);
     }

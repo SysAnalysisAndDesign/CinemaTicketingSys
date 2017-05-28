@@ -23,15 +23,16 @@
 </head>
 <body>
 
-<c:forEach items="${cinemaPage.list}" var="cinema">
-    <tr>
-        <td align="center">${cinema.cinemaName}</td>
-        <td align="center">${cinema.address}</td>
-        <td align="center">${cinema.description}</td>
-        <td align="center">${cinema.rate}</td>
-    </tr>
-    <br/>
-</c:forEach>
+<table>
+    <c:forEach items="${cinemaPage.list}" var="cinema">
+        <tr id="${cinema.cinemaId}">
+            <td align="center">${cinema.cinemaName}</td>
+            <td align="center">${cinema.address}</td>
+            <td align="center">${cinema.description}</td>
+            <td align="center">${cinema.rate}</td>
+        </tr>
+    </c:forEach>
+</table>
 
 <div class="container">
     <nav aria-label="Page navigation">
@@ -53,6 +54,15 @@
             onPageClick: function (event, page) {
                 window.location.href="http://localhost:8080/cinemas?pageNo=" + page + "&pageSize=2";
             }
+        });
+    });
+</script>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("table tr").click(function(){
+            var url = "http://localhost:8080/cinemas/" + this.id;
+            window.location.href = url;
         });
     });
 </script>

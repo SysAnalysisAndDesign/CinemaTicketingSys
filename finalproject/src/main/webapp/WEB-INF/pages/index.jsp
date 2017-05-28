@@ -26,5 +26,7 @@
     </c:otherwise>
 </c:choose>
 
+<a href="/cinemas?pageNo=1&pageSize=2">影院</a>
+
 </body>
 </html>
