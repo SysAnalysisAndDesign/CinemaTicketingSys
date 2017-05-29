@@ -6,27 +6,114 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge"> <!-- 看到IE我就怕 -->
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>CSC</title>
-    <!-- 文档中有提到css 我就不搞了 -->
+        <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="/static/css/public.css">
+    <!-- 可选的Bootstrap主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-theme.css">
+    <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+    <script src="/static/scripts/jquery-3.1.1.min.js"></script>
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="/static/bootstrap/js/bootstrap.min.js"></script>
+
+    <title>首页</title>
+
 </head>
 <body>
-<c:choose>
-    <c:when test="${pageContext.request.userPrincipal.authenticated}">
-        <h1>Hello, ${pageContext.request.userPrincipal.name}</h1>
-    </c:when>
-    <c:otherwise>
-        <h1>Hello, please login</h1>
-    </c:otherwise>
-</c:choose>
 
-<a href="/cinemas?pageNo=1&pageSize=2">影院</a>
+<script>
+    <%-- 导航栏 --%>
+    $(document).ready(function () {
+        $("#user_index").attr("href", "/user/index?username=" + '${username}');
+        $("#user_settings").attr("href", "/user/settings?username=" + '${username}');
+    });
+</script>
+<!-- 导航栏 -->
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">小丑电影</a>
+        </div>
+
+        <div id="navbar" class="navbar-collapse collapse">
+
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="/">首页</a></li>
+                <li><a href="/cinemas?pageNo=1&pageSize=2">电影</a></li>
+                <li><a href="/cinemas?pageNo=1&pageSize=2">影院</a></li>
+                <li><a href="/syllabus">个人中心</a></li>
+            </ul>
+
+
+            <ul class="nav navbar-nav navbar-right ">
+                <c:choose>
+                    <c:when test="${pageContext.request.userPrincipal.authenticated}">
+                        <li><a href="/index">${pageContext.request.userPrincipal.name}</a></li>
+                        <li><a href="/j_spring_security_logout">logout</a></li>
+                    </c:when>
+                    <c:otherwise>
+                        <li><a href="/user/login">登录或注册</a></li>
+                    </c:otherwise>
+                </c:choose>
+
+            </ul>
+            <div>
+                <form id="nav-search" class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input id="search_text" type="text" class="form-control">
+                    </div>
+                    <button id="search_btn" type="button" class="btn btn-default">Search</button>
+                </form>
+            </div>
+
+        </div><!--/.nav-collapse -->
+    </div>
+</nav>
+
+
+<script>
+    <%-- 搜索框 --%>
+    $(document).ready(function () {
+        $("#search_btn").click(function () {
+            var search_text = $("#search_text").val();
+            window.location.href = "/search?vague_name=" + search_text;
+        });
+
+        $("#search_text").keydown(function (e) {
+            if (e.keyCode == 13) {
+                var search_text = $(this).val();
+                window.location.href = "/search?vague_name=" + search_text;
+            }
+        });
+    });
+</script>
+
+
+<!-- Example row of columns -->
+
+
+</div>
+<div class="bottom">
+    <p>本页面由Clown-Movie制作</p>
+    <p>www.Clown-Movie.com.cn</p>
+    <p>Clown-Movie版权所有</p>
+</div>
 
 </body>
 </html>
