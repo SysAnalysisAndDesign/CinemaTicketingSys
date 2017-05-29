@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-theme.css">
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <script src="/static/scripts/jquery-3.1.1.min.js"></script>
+    <script src="/static/scripts/jquery-validation/jquery.validate.min.js"></script>
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
 

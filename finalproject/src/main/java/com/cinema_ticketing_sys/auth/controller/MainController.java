@@ -13,6 +13,6 @@ public class MainController {
     //注解：⽤于定义⼀个请求映射，value为请求的url，值为 / 说明，该请求⾸⻚请求，method⽤以指定该请求类型，⼀般为get和post；
     public String index() {
         return "index";
-        //处理完该请求后返回的⻚⾯，此请求返回 index.jsp⻚⾯。
+        //处理完该请求后返回的⻚⾯，此请求返回 temp.jsp⻚⾯。
     }
 }
