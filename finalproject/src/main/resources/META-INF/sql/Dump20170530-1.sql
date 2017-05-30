@@ -42,7 +42,7 @@ CREATE TABLE `bought_seat` (
 
 LOCK TABLES `bought_seat` WRITE;
 /*!40000 ALTER TABLE `bought_seat` DISABLE KEYS */;
-INSERT INTO `bought_seat` VALUES (1,1,1,1),(2,1,2,1),(3,1,3,1),(18,2,8,1),(19,2,9,1),(21,2,11,1),(22,2,12,1),(23,3,3,1),(28,3,8,1),(29,3,9,1),(34,4,4,1),(35,4,5,1),(38,4,8,1),(39,4,9,1),(40,4,10,1),(41,5,1,1),(42,5,2,1),(43,5,3,1),(48,5,8,1),(49,5,9,1),(50,5,10,1),(53,6,3,1),(54,6,4,1),(58,6,8,1),(59,6,9,1),(60,6,10,1),(61,6,11,1),(62,6,12,1),(63,7,3,1),(68,7,8,1),(69,7,9,1),(70,7,10,1),(78,8,8,1),(79,8,9,1),(80,8,10,1),(81,9,1,1),(82,9,2,1),(83,9,3,1);
+INSERT INTO `bought_seat` VALUES (1,1,1,1),(2,1,2,1),(3,1,3,1),(31,4,1,1),(32,4,2,1),(51,6,1,1),(52,6,2,1),(53,6,3,1);
 /*!40000 ALTER TABLE `bought_seat` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -119,6 +119,7 @@ CREATE TABLE `movie` (
   `description` tinytext CHARACTER SET gb2312,
   `price` double DEFAULT NULL,
   `cinema_id` int(11) DEFAULT NULL,
+  `poster_url` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`movie_id`),
   KEY `cinema_id_idx` (`cinema_id`),
   CONSTRAINT `FKcxqqfikr2t9yv97cd1lgyikv7` FOREIGN KEY (`cinema_id`) REFERENCES `cinema` (`cinema_id`),
@@ -132,7 +133,7 @@ CREATE TABLE `movie` (
 
 LOCK TABLES `movie` WRITE;
 /*!40000 ALTER TABLE `movie` DISABLE KEYS */;
-INSERT INTO `movie` VALUES (1,'加勒比海盗5','好看',35,1),(2,'摔跤吧爸爸','好看',35,1),(3,'荡寇风云','好看',35,2),(4,'三只小猪2','不看',35,2);
+INSERT INTO `movie` VALUES (1,'加勒比海盗5','好看',35,1,'/static/images/Caribbean5.jpeg'),(2,'摔跤吧爸爸','好看',35,1,'/static/images/dangle.jpeg'),(3,'荡寇风云','好看',35,2,'/static/images/dkfy.jpeg'),(4,'三只小猪2','不看',35,2,'/static/images/3pigs.jpeg');
 /*!40000 ALTER TABLE `movie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -188,7 +189,7 @@ CREATE TABLE `order` (
   KEY `order_user_id_idx` (`order_user_id`),
   CONSTRAINT `FK27f1iim365211uflgbedcq85r` FOREIGN KEY (`order_user_id`) REFERENCES `user` (`user_id`),
   CONSTRAINT `order_user_id` FOREIGN KEY (`order_user_id`) REFERENCES `user` (`user_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -197,7 +198,7 @@ CREATE TABLE `order` (
 
 LOCK TABLES `order` WRITE;
 /*!40000 ALTER TABLE `order` DISABLE KEYS */;
-INSERT INTO `order` VALUES (1,'2017-05-30','加勒比海盗5','珠江影城','5',1,2,'70.0',5);
+INSERT INTO `order` VALUES (1,'2017-05-30','加勒比海盗5','珠江影城','5',1,2,'70.0',5),(2,'2017-05-30','加勒比海盗5','珠江影城','5',1,2,'70.0',5),(3,'2017-05-30','加勒比海盗5','珠江影城','5',1,2,'105.0',5);
 /*!40000 ALTER TABLE `order` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -241,4 +242,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-30  3:09:16
+-- Dump completed on 2017-05-30 16:33:58
