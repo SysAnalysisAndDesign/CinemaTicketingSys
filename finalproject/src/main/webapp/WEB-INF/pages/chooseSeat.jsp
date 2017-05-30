@@ -47,6 +47,7 @@
 <script src="/static/scripts/jquery-3.1.1.min.js"></script>
 <script src="/static/scripts/jquery.seat-charts.js"></script>
 
+<!-- 选座插件脚本 -->
 <script>
     var firstSeatLabel = 1;
 

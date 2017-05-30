@@ -15,6 +15,7 @@
 <body>
 
 <h2>影片详情</h2>
+<p>${movie.cinema.cinemaName}</p>
 <P>${movie.movieName}</P>
 <p>${movie.description}</p>
 <p>${movie.price}</p>
