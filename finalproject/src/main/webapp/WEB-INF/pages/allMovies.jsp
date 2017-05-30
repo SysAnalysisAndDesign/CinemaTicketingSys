@@ -1,15 +1,15 @@
 <%--
   Created by IntelliJ IDEA.
   User: huitianrui
-  Date: 2017/5/23
-  Time: 23:20
+  Date: 2017/5/30
+  Time: 14:31
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <html>
 <head>
-    <title>所有影院</title>
+    <title>所有电影</title>
     <link rel="stylesheet" href="/static/css/public.css">
     <!-- 可选的Bootstrap主题文件（一般不用引入） -->
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
@@ -23,49 +23,46 @@
 </head>
 <body>
 
-<!-- 展示影院详细信息 -->
 <table>
-    <c:forEach items="${cinemaPage.list}" var="cinema">
-        <tr id="${cinema.cinemaId}">
-            <td align="center">${cinema.cinemaName}</td>
-            <td align="center">${cinema.address}</td>
-            <td align="center">${cinema.description}</td>
-            <td align="center">${cinema.rate}</td>
+    <c:forEach items="${moviePage.list}" var="movie">
+        <tr id="${movie.movieId}">
+            <td align="center">
+                <img src="${movie.posterUrl}" width="120px" height="165px"/>
+            </td>
+            <td align="center">${movie.movieName}</td>
+            <td align="center">${movie.description}</td>
         </tr>
     </c:forEach>
 </table>
 
-<!-- 分页插件导航栏所用容器 -->
 <div class="container">
     <nav aria-label="Page navigation">
         <ul class="pagination" id="pagination"></ul>
     </nav>
 </div>
 
-<!-- 分页插件js脚本 -->
 <script type="text/javascript">
     $(function () {
         $('#pagination').twbsPagination({
-            totalPages: ${cinemaPage.totalPage},
+            totalPages: ${moviePage.totalPage},
             visiblePages: 5,
             first: "首页",
             prev: "上一页",
             next: "下一页",
             last: "末页",
             initiateStartPageClick: false,
-            startPage: ${cinemaPage.currPage},
+            startPage: ${moviePage.currPage},
             onPageClick: function (event, page) {
-                window.location.href="http://localhost:8080/cinemas?pageNo=" + page + "&pageSize=2";
+                window.location.href="http://localhost:8080/movies?pageNo=" + page + "&pageSize=2";
             }
         });
     });
 </script>
 
-<!-- 每个影院的点击跳转函数 -->
 <script type="text/javascript">
     $(document).ready(function(){
         $("table tr").click(function(){
-            var url = "http://localhost:8080/cinemas/" + this.id;
+            var url = "http://localhost:8080/movies/" + this.id + "/cinemas";
             window.location.href = url;
         });
     });

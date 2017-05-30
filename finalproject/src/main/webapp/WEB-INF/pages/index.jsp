@@ -28,5 +28,7 @@
 
 <a href="/cinemas?pageNo=1&pageSize=2">影院</a>
 
+<a href="/movies?pageNo=1&pageSize=2">电影</a>
+
 </body>
 </html>
