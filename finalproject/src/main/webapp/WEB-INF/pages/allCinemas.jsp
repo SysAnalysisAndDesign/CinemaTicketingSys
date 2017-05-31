@@ -122,6 +122,8 @@
         <button class="submit" type="submit"></button>
     </form>
 </div>
+
+<!-- 分页插件导航栏所用容器 -->
 <div class="container">
     <div class="container-cinema">
         <ul class="cinema-list">
@@ -173,6 +175,7 @@
     <p>Clown-Movie版权所有</p>
 </div>
 
+<!-- 分页插件js脚本 -->
 <script type="text/javascript">
     $(function () {
         $('#pagination').twbsPagination({
@@ -191,6 +194,7 @@
     });
 </script>
 
+<!-- 每个影院的点击跳转函数 -->
 <script type="text/javascript">
     $(document).ready(function () {
         $("ul li").click(function () {

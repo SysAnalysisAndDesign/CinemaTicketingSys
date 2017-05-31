@@ -11,7 +11,10 @@
            http://www.springframework.org/schema/context/spring-context-3.0.xsd
            http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.0.xsd">
 
-    <!-- 配置哪些包下的类进行Spring的组件自动扫描 -->
-    <context:component-scan base-package="com.cinema_ticketing_sys"/>
+    <!-- 自动扫包：不扫控制层bean -->
+    <context:component-scan base-package="com.cinema_ticketing_sys">
+        <context:exclude-filter type="annotation"
+                                expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
 
 </beans>
