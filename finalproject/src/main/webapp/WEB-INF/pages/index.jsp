@@ -115,5 +115,7 @@
     <p>Clown-Movie版权所有</p>
 </div>
 
+<a href="/movies?pageNo=1&pageSize=2">电影</a>
+
 </body>
 </html>

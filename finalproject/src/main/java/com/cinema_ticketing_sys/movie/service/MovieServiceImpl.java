@@ -8,6 +8,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 
 /**
  * Created by KC on 2017/5/17.
@@ -25,6 +27,16 @@ public class MovieServiceImpl implements MovieService {
     @Override
     public Movie findMovieByName(String Name) {
         return movieDAO.findMovieByName(Name);
+    }
+
+    @Override
+    public List<Movie> findMovieByPage(Integer pageNo, Integer pageSize) {
+        return movieDAO.findMovieByPage(pageNo, pageSize);
+    }
+
+    @Override
+    public long findMovieCount(Class<Movie> movieClass) {
+        return movieDAO.findMovieCount(movieClass);
     }
 
     @Override

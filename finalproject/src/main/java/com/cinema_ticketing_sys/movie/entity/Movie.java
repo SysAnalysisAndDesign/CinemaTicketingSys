@@ -18,6 +18,7 @@ public class Movie {
     private String movieName;
     private String description;
     private Double price;
+    private String posterUrl;
 
     private Set<MovieCutting> movieCuttings = new HashSet<>();
     private Set<Comment> comments = new HashSet<>();
@@ -97,27 +98,43 @@ public class Movie {
         this.price = price;
     }
 
+    @Basic
+    @Column(name = "poster_url")
+    public String getPosterUrl() {
+        return posterUrl;
+    }
+
+    public void setPosterUrl(String posterUrl) {
+        this.posterUrl = posterUrl;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Movie that = (Movie) o;
+        Movie movie = (Movie) o;
 
-        if (movieId != that.movieId) return false;
-        if (movieName != null ? !movieName.equals(that.movieName) : that.movieName != null) return false;
-        if (description != null ? !description.equals(that.description) : that.description != null) return false;
-        if (price != null ? !price.equals(that.price) : that.price != null) return false;
-
-        return true;
+        if (movieId != movie.movieId) return false;
+        if (!movieName.equals(movie.movieName)) return false;
+        if (!description.equals(movie.description)) return false;
+        if (!price.equals(movie.price)) return false;
+        if (!posterUrl.equals(movie.posterUrl)) return false;
+        if (!movieCuttings.equals(movie.movieCuttings)) return false;
+        if (!comments.equals(movie.comments)) return false;
+        return cinema.equals(movie.cinema);
     }
 
     @Override
     public int hashCode() {
         int result = movieId;
-        result = 31 * result + (movieName != null ? movieName.hashCode() : 0);
-        result = 31 * result + (description != null ? description.hashCode() : 0);
-        result = 31 * result + (price != null ? price.hashCode() : 0);
+        result = 31 * result + movieName.hashCode();
+        result = 31 * result + description.hashCode();
+        result = 31 * result + price.hashCode();
+        result = 31 * result + posterUrl.hashCode();
+        result = 31 * result + movieCuttings.hashCode();
+        result = 31 * result + comments.hashCode();
+        result = 31 * result + cinema.hashCode();
         return result;
     }
 }
