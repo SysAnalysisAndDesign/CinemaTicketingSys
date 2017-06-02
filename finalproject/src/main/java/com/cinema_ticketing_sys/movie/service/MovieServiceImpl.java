@@ -4,14 +4,24 @@ import com.cinema_ticketing_sys.movie.dao.MovieDAO;
 import com.cinema_ticketing_sys.movie.entity.Movie;
 import com.cinema_ticketing_sys.support.interfaces.CreationCallback;
 import com.cinema_ticketing_sys.support.utils.StringUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 
 /**
  * Created by KC on 2017/5/17.
  */
+@Service
+@Transactional
 public class MovieServiceImpl implements MovieService {
 
+    @Autowired
     private MovieDAO movieDAO;
+
+    @Override
+    public Movie findMovieById(int movieId) { return movieDAO.findMovieById(movieId); }
+
     @Override
     public Movie findMovieByName(String Name) {
         return movieDAO.findMovieByName(Name);

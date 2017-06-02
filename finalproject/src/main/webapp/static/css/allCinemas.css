@@ -1,0 +1,106 @@
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.container-cinema {
+    width: 950px;
+    margin: 0 auto;
+}
+
+.search-box {
+    width: 100%;
+    margin-top: 51px;
+    min-width: 1200px;
+    background: #47464a;
+    padding-bottom: 60px;
+    margin-bottom: -60px;
+}
+
+.search-box form{
+    width: 630px;
+    margin: 0 auto;
+    padding-top: 38px;
+    padding-bottom: 8px;
+    position: relative;
+}
+
+.search-box .kw {
+    box-sizing: border-box;
+    line-height: 18px;
+    width: 630px;
+    padding: 15px 20px 15px 20px;
+    border: 1px solid #999999;
+    border-radius: 50px;
+    background: white;
+
+}
+
+.search-box .submit {
+    position: absolute;
+    box-sizing: border-box;
+    border: none;
+    left: auto;
+    top: 51px;
+    right: 12px;
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+}
+
+.container-cinema ul {
+    margin: 0 0 20px 0;
+    padding: 0;
+}
+
+ul {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+.container-cinema li {
+    list-style: none;
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 23px;
+}
+
+.cinema-name {
+    margin-top: 10px;
+    font-size: 26px;
+    color: #333333;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-bottom: 1px;
+    margin-bottom: -1px;
+}
+
+.cinema-address {
+    font-size: 18px;
+    margin-top: 5px;
+    color: #999999;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding-bottom: 1px;
+    margin-bottom: -1px;
+}
+
+.cinema-rate {
+    float: right;
+    width: 180px;
+    text-align: right;
+    font-size: 28px;
+    color: #FF7F50;
+    margin-top: 32px;
+}
+
+.pager2 {
+    margin-top: 80px;
+    text-align: center;
+}

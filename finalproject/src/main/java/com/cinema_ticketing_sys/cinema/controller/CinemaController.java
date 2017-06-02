@@ -37,7 +37,14 @@ public class CinemaController {
         // ModelMap用来存储Controller处理后的数据
         // Controller将ModelMap发送到前端供JSP页面使用
         modelMap.addAttribute("cinemaPage", cinemaPage);
-        return "cinemasInPage";
+        return "allCinemas";
+    }
+
+    @RequestMapping(value = "/{cinemaId}")
+    public String cinemaDetails(@PathVariable String cinemaId, ModelMap modelMap) {
+        Cinema cinema = cinemaService.findCinemaById(Integer.parseInt(cinemaId));
+        modelMap.addAttribute("cinema", cinema);
+        return "cinemaDetails";
     }
 
 }

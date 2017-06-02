@@ -31,7 +31,7 @@ public class BoughtSeat {
 
     @Id
     @Column(name = "seat_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    //@GeneratedValue(strategy = GenerationType.IDENTITY)
     public int getSeatId() {
         return seatId;
     }

@@ -9,6 +9,14 @@ import java.util.List;
  * Created by KC on 2017/5/15.
  */
 public interface CinemaService {
+
+    /**
+     * 通过id查找电影院
+     * @param cinemaId
+     * @return 影院
+     */
+    Cinema findCinemaById(int cinemaId);
+
     /**
      * 通过名字查找电影院
      * @param name 名字
