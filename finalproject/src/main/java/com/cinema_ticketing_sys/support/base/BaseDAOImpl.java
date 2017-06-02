@@ -37,7 +37,7 @@ public abstract class BaseDAOImpl<T> implements BaseDAO<T> {
      */
     @Override
     public void save(T t) {
-        getCurrentSession().save(t);
+        getCurrentSession().saveOrUpdate(t);
     }
 
     /**

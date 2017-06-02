@@ -1,6 +1,5 @@
 package com.cinema_ticketing_sys.movie.controller;
 
-import com.cinema_ticketing_sys.cinema.entity.Cinema;
 import com.cinema_ticketing_sys.movie.entity.Movie;
 import com.cinema_ticketing_sys.movie.service.MovieService;
 import com.cinema_ticketing_sys.support.utils.Page;
@@ -23,17 +22,17 @@ public class MovieController {
     private MovieService movieService;
 
     @RequestMapping()
-    public String getAllCinemas(Integer pageNo, Integer pageSize, ModelMap modelMap) {
-        List<Cinema> cinemas = new ArrayList<>();
-        cinemas = movieService.findMovieByName(name);
-        long totalCinemas = cinemaService.findCinemaCount(Cinema.class);
+    public String getAllMovies(Integer pageNo, Integer pageSize, ModelMap modelMap) {
+        List<Movie> movies = new ArrayList<>();
+        movies = movieService.findMovieByPage(pageNo, pageSize);
+        long totalMovies = movieService.findMovieCount(Movie.class);
 
-        Page<Cinema> moviePage = new Page<>();
-        moviePage.setList(cinemas);
+        Page<Movie> moviePage = new Page<>();
+        moviePage.setList(movies);
         moviePage.setCurrPage(pageNo);
         moviePage.setPageSize(pageSize);
-        moviePage.setTotalCount((int)totalCinemas);
-        moviePage.setTotalPage((int)Math.ceil((double) totalCinemas / pageSize));
+        moviePage.setTotalCount((int)totalMovies);
+        moviePage.setTotalPage((int)Math.ceil((double) totalMovies / pageSize));
 
         // ModelMap用来存储Controller处理后的数据
         // Controller将ModelMap发送到前端供JSP页面使用
@@ -47,4 +46,12 @@ public class MovieController {
         modelMap.addAttribute("movie", movie);
         return "movieDetails";
     }
+
+    @RequestMapping(value = "/{movieId}/cinemas")
+    public String movieCinemas(@PathVariable String movieId, ModelMap modelMap) {
+        Movie movie = movieService.findMovieById(Integer.parseInt(movieId));
+        modelMap.addAttribute("movie", movie);
+        return "movieCinemas";
+    }
+
 }
