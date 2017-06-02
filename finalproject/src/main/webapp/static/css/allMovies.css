@@ -3,7 +3,7 @@
     margin: 0 auto;
 }
 
-.container-cinema {
+.container-movie {
     width: 950px;
     margin-top: 100px;
 }
@@ -48,7 +48,7 @@
     cursor: pointer;
 }
 
-.container-cinema ul {
+.container-movie ul {
     margin: 0 0 20px 0;
     padding: 0;
 }
@@ -63,13 +63,23 @@ ul {
     -webkit-padding-start: 40px;
 }
 
-.container-cinema li {
+.container-movie li {
     list-style: none;
     border-bottom: 1px solid #e5e5e5;
-    padding-bottom: 23px;
+    padding-bottom: 11px;
+    padding-top: 11px;
 }
 
-.cinema-name {
+.movie-poster {
+    margin-top: 5px;
+    overflow: hidden;
+    white-space: nowrap;
+    padding-bottom: 1px;
+    margin-bottom: -1px;
+    display: inline;
+}
+
+.movie-name {
     margin-top: 10px;
     font-size: 26px;
     color: #333333;
@@ -77,27 +87,19 @@ ul {
     white-space: nowrap;
     text-overflow: ellipsis;
     padding-bottom: 1px;
+    padding-left: 88px;
     margin-bottom: -1px;
+    display: inline;
 }
 
-.cinema-address {
-    font-size: 18px;
-    margin-top: 5px;
-    color: #999999;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    padding-bottom: 1px;
-    margin-bottom: -1px;
-}
-
-.cinema-rate {
+.movie-description {
     float: right;
     width: 180px;
     text-align: right;
     font-size: 28px;
     color: #FF7F50;
-    margin-top: 32px;
+    margin-top: 54px;
+    display: inline;
 }
 
 .pager2 {
