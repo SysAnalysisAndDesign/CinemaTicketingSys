@@ -9,16 +9,17 @@ import java.sql.Timestamp;
  * Created by huitianrui on 2017/5/11.
  */
 @Entity
-@Table(name = "order", schema = "cinema_ticketing_db")
+// 真trick order是MySQL的关键字，不能直接拿来当表名，要用``括起来才行
+@Table(name = "`order`", schema = "cinema_ticketing_db")
 public class Order {
     private int orderId;
-    private Timestamp date;
+    private String date;
     private String movieName;
     private String cinemaName;
     private String hallNumber;
     private Integer row;
     private Integer col;
-    private Double price;
+    private String totalPrice;
 
     private User user;
 
@@ -48,11 +49,11 @@ public class Order {
 
     @Basic
     @Column(name = "date")
-    public Timestamp getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(Timestamp date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
@@ -107,13 +108,13 @@ public class Order {
     }
 
     @Basic
-    @Column(name = "price")
-    public Double getPrice() {
-        return price;
+    @Column(name = "total_price")
+    public String getTotalPrice() {
+        return totalPrice;
     }
 
-    public void setPrice(Double price) {
-        this.price = price;
+    public void setTotalPrice(String totalPrice) {
+        this.totalPrice = totalPrice;
     }
 
     @Override
@@ -130,7 +131,7 @@ public class Order {
         if (hallNumber != null ? !hallNumber.equals(that.hallNumber) : that.hallNumber != null) return false;
         if (row != null ? !row.equals(that.row) : that.row != null) return false;
         if (col != null ? !col.equals(that.col) : that.col != null) return false;
-        if (price != null ? !price.equals(that.price) : that.price != null) return false;
+        if (totalPrice != null ? !totalPrice.equals(that.totalPrice) : that.totalPrice != null) return false;
 
         return true;
     }
@@ -144,7 +145,7 @@ public class Order {
         result = 31 * result + (hallNumber != null ? hallNumber.hashCode() : 0);
         result = 31 * result + (row != null ? row.hashCode() : 0);
         result = 31 * result + (col != null ? col.hashCode() : 0);
-        result = 31 * result + (price != null ? price.hashCode() : 0);
+        result = 31 * result + (totalPrice != null ? totalPrice.hashCode() : 0);
         return result;
     }
 }
