@@ -1,15 +1,15 @@
 <%--
   Created by IntelliJ IDEA.
-  User: huitianrui
-  Date: 2017/5/23
-  Time: 23:20
+  User: wangzi
+  Date: 17/6/2
+  Time: 下午4:06
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<html>
 
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge">
@@ -31,7 +31,6 @@
     <script src="/static/scripts/jquery.twbsPagination.js"></script>
 
     <title>首页</title>
-
 </head>
 <body>
 
@@ -98,7 +97,6 @@
     </div>
 </nav>
 
-
 <script>
     <%-- 搜索框 --%>
     $(document).ready(function () {
@@ -118,7 +116,7 @@
 
 <div class="search-box">
     <form class="searchCinema-form">
-        <input class="kw" type="text" maxlength="32" name="kw" placeholder="查找影院" autocomplete="off">
+        <input class="kw" type="text" maxlength="32" name="kw" placeholder="查找电影" autocomplete="off">
         <button class="submit" type="submit"></button>
     </form>
 </div>
@@ -185,7 +183,7 @@
             initiateStartPageClick: false,
             startPage: ${cinemaPage.currPage},
             onPageClick: function (event, page) {
-                window.location.href = "http://localhost:8080/cinemas?pageNo=" + page + "&pageSize=2";
+                window.location.href = "http://localhost:8080/movies?pageNo=" + page + "&pageSize=2";
             }
         });
     });
