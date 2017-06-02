@@ -16,7 +16,7 @@ a {
     color: #859295;
     text-decoration: none;
 }
-a, button {
+a, button, .nav {
     cursor: pointer;
 }
 .jumbotron
