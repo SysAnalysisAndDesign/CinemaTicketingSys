@@ -29,6 +29,7 @@
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
     <script src="/static/scripts/jquery.twbsPagination.js"></script>
+    <script src="/static/scripts/public.js"></script>
 
     <title>首页</title>
 
@@ -69,14 +70,13 @@
                 <li class="active"><a href="/">首页</a></li>
                 <li><a href="/cinemas?pageNo=1&pageSize=2">电影</a></li>
                 <li><a href="/cinemas?pageNo=1&pageSize=2">影院</a></li>
-                <li><a href="/syllabus">个人中心</a></li>
             </ul>
 
 
             <ul class="nav navbar-nav navbar-right ">
                 <c:choose>
                     <c:when test="${pageContext.request.userPrincipal.authenticated}">
-                        <li><a href="/index">${pageContext.request.userPrincipal.name}</a></li>
+                        <li><a id="user_index" href="#">${pageContext.request.userPrincipal.name}</a></li>
                         <li><a href="/j_spring_security_logout">logout</a></li>
                     </c:when>
                     <c:otherwise>
@@ -97,24 +97,6 @@
         </div><!--/.nav-collapse -->
     </div>
 </nav>
-
-
-<script>
-    <%-- 搜索框 --%>
-    $(document).ready(function () {
-        $("#search_btn").click(function () {
-            var search_text = $("#search_text").val();
-            window.location.href = "/search?vague_name=" + search_text;
-        });
-
-        $("#search_text").keydown(function (e) {
-            if (e.keyCode == 13) {
-                var search_text = $(this).val();
-                window.location.href = "/search?vague_name=" + search_text;
-            }
-        });
-    });
-</script>
 
 <div class="search-box">
     <form class="searchCinema-form">
