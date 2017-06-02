@@ -2,14 +2,16 @@ package com.cinema_ticketing_sys.movie.dao;
 
 import com.cinema_ticketing_sys.movie.entity.Movie;
 import com.cinema_ticketing_sys.support.base.BaseDAOImpl;
+import org.springframework.stereotype.Repository;
 
 /**
  * Created by KC on 2017/5/17.
  */
+@Repository
 public class MovieDAOImpl extends BaseDAOImpl<Movie> implements MovieDAO {
     @Override
-    public Movie findMoiveById(int id) {
-        return findByUnique("cinemaId", id);
+    public Movie findMovieById(int id) {
+        return get(id);
     }
 
     @Override
