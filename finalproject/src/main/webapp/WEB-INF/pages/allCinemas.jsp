@@ -35,12 +35,6 @@
 </head>
 <body>
 
-<style>
-    .container-cinema {
-        margin-top: 100px;
-    }
-</style>
-
 <script>
     <%-- 导航栏 --%>
     $(document).ready(function () {
@@ -48,7 +42,7 @@
         $("#user_settings").attr("href", "/user/settings?username=" + '${username}');
     });
 </script>
-<!-- 导航栏 -->
+<%-- 导航栏 --%>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
 
@@ -105,7 +99,7 @@
     </form>
 </div>
 
-<!-- 分页插件导航栏所用容器 -->
+<%-- 分页插件导航栏所用容器 --%>
 <div class="container">
     <div class="container-cinema">
         <ul class="cinema-list">
@@ -156,7 +150,7 @@
     <p>Clown-Movie版权所有</p>
 </div>
 
-<!-- 分页插件js脚本 -->
+<%-- 分页插件js脚本 --%>
 <script type="text/javascript">
     $(function () {
         $('#pagination').twbsPagination({
@@ -175,7 +169,7 @@
     });
 </script>
 
-<!-- 每个影院的点击跳转函数 -->
+<%-- 每个影院的点击跳转函数 --%>
 <script type="text/javascript">
     $(document).ready(function () {
         $("ul li").click(function () {
