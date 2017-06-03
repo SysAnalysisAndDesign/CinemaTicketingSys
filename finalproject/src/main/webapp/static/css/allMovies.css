@@ -83,7 +83,7 @@ ul {
 .movie-nameAndDescription {
     float: right;
     margin-right: 615px;
-    padding-left: 15px;
+    padding-left: 8px;
     border-left: 1px solid #e5e5e5;
     height: 165px;
 }
@@ -96,7 +96,7 @@ ul {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    padding: 0px 0px 0px 13px;
+    padding: 0px 0px 0px 7px;
     margin-bottom: -1px;
     border-bottom: 1px solid #e5e5e5;
 }
@@ -104,7 +104,7 @@ ul {
 .movie-description {
     font-size: 16px;
     color: #999999;
-    padding: 8px 0px 0px 13px;
+    padding: 8px 0px 0px 7px;
 }
 
 .word {
