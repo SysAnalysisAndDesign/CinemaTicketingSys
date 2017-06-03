@@ -149,5 +149,10 @@
     </c:forEach>
 </table>
 
+<div class="bottom">
+    <p>本页面由Clown-Movie制作</p>
+    <p>www.Clown-Movie.com.cn</p>
+    <p>Clown-Movie版权所有</p>
+</div>
 </body>
 </html>
