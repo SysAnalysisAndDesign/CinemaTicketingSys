@@ -1,0 +1,124 @@
+body {
+    line-height: 12px;
+}
+
+.information-wrapper {
+    width: 100%;
+    min-height: 400px;
+    margin-top: 50px;
+    overflow: hidden;
+    color: #ffffff;
+    background: #2e2e2e url("/static/images/cinemaDe_back.png");
+    background-size: 100% 100%;
+}
+
+.center-wrap {
+    width: 900px;
+    min-width: 900px;
+    margin: 0 auto;
+}
+
+h4 {
+    color: #ffffff;
+    display: block;
+    -webkit-margin-before: 1.33em;
+    -webkit-margin-after: 1.33em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+}
+
+.cinema-name {
+    height: 60px;
+    line-height: 60px;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 35px 0;
+}
+
+.score {
+    font-size: 24px;
+    font-family: Verdana;
+    color: #eb002a;
+    vertical-align: baseline;
+    font-weight: 500;
+}
+
+.info {
+    margin-top: 0px;
+    overflow: hidden;
+}
+
+.cinema-img {
+    position: relative;
+    float: left;
+    width: 300px;
+    height: 200px;
+    overflow: hidden;
+    background: #6d6d6d;
+}
+
+ul {
+    list-style: none;
+}
+
+.info-list {
+    float: left;
+    display: block;
+    line-height: 20px;
+    overflow: hidden;
+    margin-left: 30px;
+    font-size: 15px;
+    opacity: .9;
+    max-width: 300px;
+    margin-top: 20px;
+
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.movie-head {
+    border-bottom: 1px solid #eeeeee;
+}
+
+.movie-title {
+    margin: 30px 10px 15px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #343d42;
+
+}
+
+.movie-wrapper {
+    width: 100%;
+    min-height: 200px;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.movie-info-wrap {
+    overflow: hidden;
+    padding: 10px 0 0 30px;
+    min-height: 200px;
+    float: left;
+}
+
+.movie-name {
+    padding-bottom: 5px;
+    border-bottom: 1px solid #cccccc;
+    margin-bottom: 5px;
+}
+
+.movie-info li{
+    line-height: 22px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.movie-img {
+    float: left;
+    margin: 20px 0 20px 20px;
+    width: 120px;
+    height: 160px;
+}
