@@ -82,21 +82,6 @@
     </div>
 </nav>
 
-<script>
-    <%-- 搜索框 --%>
-    $(document).ready(function () {
-        $("#search_btn").click(function () {
-            var search_text = $("#search_text").val();
-            window.location.href = "/search?vague_name=" + search_text;
-        });
-        $("#search_text").keydown(function (e) {
-            if (e.keyCode == 13) {
-                var search_text = $(this).val();
-                window.location.href = "/search?vague_name=" + search_text;
-            }
-        });
-    });
-</script>
 
 <div class="search-box">
     <form class="searchCinema-form">
@@ -105,7 +90,7 @@
     </form>
 </div>
 
-<!-- TODO 修改class名字 css等 -->
+<!-- 分页插件导航栏所用容器 -->
 <div class="container">
     <div class="container-movie">
         <ul class="movie-list">
@@ -132,30 +117,13 @@
     </div>
 </div>
 
-<script type="text/javascript">
-    $(function () {
-        $('#pagination').twbsPagination({
-            totalPages: ${moviePage.totalPage},
-            visiblePages: 5,
-            first: "首页",
-            prev: "上一页",
-            next: "下一页",
-            last: "末页",
-            initiateStartPageClick: false,
-            startPage: ${moviePage.currPage},
-            onPageClick: function (event, page) {
-                window.location.href="http://localhost:8080/movies?pageNo=" + page + "&pageSize=2";
-            }
-        });
-    });
-</script>
-
 <div class="bottom">
     <p>本页面由Clown-Movie制作</p>
     <p>www.Clown-Movie.com.cn</p>
     <p>Clown-Movie版权所有</p>
 </div>
 
+<!-- 分页插件js脚本 -->
 <script type="text/javascript">
     $(function () {
         $('#pagination').twbsPagination({
@@ -174,6 +142,7 @@
     });
 </script>
 
+<!-- 每个影院的点击跳转函数 -->
 <script type="text/javascript">
     $(document).ready(function(){
         $("ul li").click(function(){
