@@ -107,3 +107,27 @@ table {
     font-size: 14px;
     text-align: center;
 }
+
+.hall-table tbody td {
+    width: 180px;
+    height: 60px;
+    text-align: center;
+    line-height: 23px;
+}
+
+.item-price {
+    font-size: 18px;
+    color: #eb002a;
+    font-weight: 700;
+}
+
+.buy-btn {
+    display: inline-block;
+    width: 128px;
+    height: 33px;
+    line-height: 33px;
+    color: #ffffff;
+    background: #F42429;
+    overflow: hidden;
+    margin-top: 8px;
+}

@@ -90,14 +90,13 @@
                     <img src="${movie.posterUrl}">
                 </div>
                 <ul class="cont-info">
-                    <li>导演：</li>
-                    <li>主演：</li>
-                    <li>类型：</li>
-                    <li>制片国家/地区：</li>
-                    <li>语言：</li>
-                    <li>片长：</li>
-                    <li>简介：${movie.description},每一天梦想都延续着,心中总是满怀期待,站在这个熠熠生辉的舞台
-                    ,看到了大家手中的荧光,我的声音 大家都好好地听到了吗</li>
+                    <li>导演：${movie.director}</li>
+                    <li>主演：${movie.cast}</li>
+                    <li>类型：${movie.type}</li>
+                    <li>制片国家/地区：${movie.region}</li>
+                    <li>语言：${movie.language}</li>
+                    <li>片长：${movie.length}</li>
+                    <li>简介：${movie.description}</li>
                 </ul>
             </div>
 
@@ -110,14 +109,26 @@
         <table class="hall-table">
             <thead>
             <tr>
+                <th class="hall-time">日期</th>
                 <th class="hall-time">放映时间</th>
-                <th class="hall-type">语言版本</th>
                 <th class="hall-name">放映厅</th>
                 <th class="hall-price">价格</th>
                 <th class="hall-buy">选座购票</th>
             </tr>
             </thead>
-
+            <tbody>
+            <c:forEach items="${movie.movieCuttings}" var="cutting">
+                <tr id="${cutting.movieCuttingId}">
+                    <td class="item-date">${cutting.startDate}</td>
+                    <td>${cutting.startTime}</td>
+                    <td>${cutting.hallNumber}号厅</td>
+                    <td class="item-price">${movie.price}</td>
+                    <td class="item-buy">
+                        <a class="buy-btn" href="/cuttings/${cutting.movieCuttingId}">选座购票</a>
+                    </td>
+                </tr>
+            </c:forEach>
+            </tbody>
 
         </table>
     </div>
@@ -127,20 +138,6 @@
     </div>
 </div>
 
-
-<h2>所有场次</h2>
-<table id="allMovieCuttings">
-    <c:forEach items="${movie.movieCuttings}" var="cutting">
-        <tr id="${cutting.movieCuttingId}">
-            <td align="center">${cutting.startDate}</td>
-            <td align="center">${cutting.startTime}</td>
-            <td align="center">${cutting.length}分钟</td>
-            <td align="center">${cutting.hallNumber}号厅</td>
-        </tr>
-    </c:forEach>
-</table>
-
-<h2>影片评论</h2>
 <table id="allComments">
     <c:forEach items="${movie.comments}" var="comment">
         <tr id="${comment.commentId}">
@@ -151,15 +148,6 @@
         </tr>
     </c:forEach>
 </table>
-
-<script type="text/javascript">
-    $(document).ready(function () {
-        $("#allMovieCuttings tr").click(function () {
-            var url = "http://localhost:8080/cuttings/" + this.id;
-            window.location.href = url;
-        });
-    });
-</script>
 
 </body>
 </html>
