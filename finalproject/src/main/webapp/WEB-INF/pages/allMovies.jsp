@@ -21,17 +21,11 @@
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
     <script src="/static/scripts/jquery.twbsPagination.js" type="text/javascript"></script>
+    <script src="/static/scripts/public.js"></script>
 </head>
 
 <body>
 
-<script>
-    <%-- 导航栏 --%>
-    $(document).ready(function () {
-        $("#user_index").attr("href", "/user/index?username=" + '${username}');
-        $("#user_settings").attr("href", "/user/settings?username=" + '${username}');
-    });
-</script>
 <!-- 导航栏 -->
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
@@ -53,7 +47,6 @@
                 <li class="active"><a href="/">首页</a></li>
                 <li><a href="/movies?pageNo=1&pageSize=2">电影</a></li>
                 <li><a href="/cinemas?pageNo=1&pageSize=2">影院</a></li>
-                <li><a href="/syllabus">个人中心</a></li>
             </ul>
 
 
@@ -81,7 +74,6 @@
         </div><!--/.nav-collapse -->
     </div>
 </nav>
-
 
 <div class="search-box">
     <form class="searchCinema-form">
