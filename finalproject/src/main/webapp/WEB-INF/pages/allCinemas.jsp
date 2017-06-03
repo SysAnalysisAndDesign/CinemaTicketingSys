@@ -69,6 +69,7 @@
                 <li><a href="/">首页</a></li>
                 <li><a href="/movies?pageNo=1&pageSize=2">电影</a></li>
                 <li class="active"><a href="/cinemas?pageNo=1&pageSize=2">影院</a></li>
+                <li><a href="/syllabus">个人中心</a></li>
             </ul>
 
 
