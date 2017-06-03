@@ -47,6 +47,7 @@
                 <li><a href="/">首页</a></li>
                 <li class="active"><a href="/movies?pageNo=1&pageSize=2">电影</a></li>
                 <li><a href="/cinemas?pageNo=1&pageSize=2">影院</a></li>
+                <li><a href="/syllabus">个人中心</a></li>
             </ul>
 
 
@@ -122,22 +123,22 @@
 <script type="text/javascript">
     $(function () {
         $('#pagination').twbsPagination({
-            totalPages: ${cinemaPage.totalPage},
+            totalPages: ${moviePage.totalPage},
             visiblePages: 5,
             first: "首页",
             prev: "上一页",
             next: "下一页",
             last: "末页",
             initiateStartPageClick: false,
-            startPage: ${cinemaPage.currPage},
+            startPage: ${moviePage.currPage},
             onPageClick: function (event, page) {
-                window.location.href = "http://localhost:8080/cinemas?pageNo=" + page + "&pageSize=2";
+                window.location.href = "http://localhost:8080/movies?pageNo=" + page + "&pageSize=2";
             }
         });
     });
 </script>
 
-<!-- 每个影院的点击跳转函数 -->
+<!-- 每个电影的点击跳转函数 -->
 <script type="text/javascript">
     $(document).ready(function(){
         $("ul li").click(function(){
