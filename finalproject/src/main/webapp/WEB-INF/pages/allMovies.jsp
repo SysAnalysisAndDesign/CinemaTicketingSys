@@ -26,7 +26,7 @@
 
 <body>
 
-<!-- 导航栏 -->
+<%-- 导航栏 --%>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
 
@@ -83,7 +83,7 @@
     </form>
 </div>
 
-<!-- 分页插件导航栏所用容器 -->
+<%-- 分页插件导航栏所用容器 --%>
 <div class="container">
     <div class="container-movie">
         <ul class="movie-list">
@@ -119,7 +119,7 @@
     <p>Clown-Movie版权所有</p>
 </div>
 
-<!-- 分页插件js脚本 -->
+<%-- 分页插件js脚本 --%>
 <script type="text/javascript">
     $(function () {
         $('#pagination').twbsPagination({
@@ -138,7 +138,7 @@
     });
 </script>
 
-<!-- 每个电影的点击跳转函数 -->
+<%-- 每个电影的点击跳转函数 --%>
 <script type="text/javascript">
     $(document).ready(function(){
         $("ul li").click(function(){
