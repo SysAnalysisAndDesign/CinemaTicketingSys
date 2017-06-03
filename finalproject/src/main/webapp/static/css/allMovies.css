@@ -95,12 +95,16 @@ ul {
 
 .movie-description {
     float: right;
+    height: 100px;
     width: 180px;
     text-align: right;
     font-size: 28px;
     color: #FF7F50;
-    margin-top: 54px;
+    margin-top: 27px;
+    padding-top: 27px;
     display: inline;
+    border-left: 1px solid #e5e5e5;
+    padding-right: 49px;
 }
 
 .pager2 {
