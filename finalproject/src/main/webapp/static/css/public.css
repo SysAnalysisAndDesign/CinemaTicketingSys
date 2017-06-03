@@ -96,3 +96,7 @@ a, button, .nav {
     padding: 0;
     margin: 0;
 }
+
+.content {
+    margin-top: 51px;
+}

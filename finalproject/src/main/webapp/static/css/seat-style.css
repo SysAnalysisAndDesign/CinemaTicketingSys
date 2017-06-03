@@ -4,6 +4,7 @@ body {
 a {
     color: #b71a4c;
 }
+
 .front-indicator {
     width: 340px;
     margin: 5px 32px 15px 43px;
@@ -15,12 +16,15 @@ a {
 }
 .wrapper {
     width: 100%;
+    min-height: 401px;
     text-align: center;
 }
-.container {
+.cont {
     margin: 0 auto;
-    width: 800px;
-    text-align: left;
+    width: 700px;
+    min-height: 401px;
+    text-align: center;
+    position: relative;
 }
 .booking-details {
     float: left;
