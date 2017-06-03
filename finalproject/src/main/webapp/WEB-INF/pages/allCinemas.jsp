@@ -41,13 +41,6 @@
     }
 </style>
 
-<script>
-    <%-- 导航栏 --%>
-    $(document).ready(function () {
-        $("#user_index").attr("href", "/user/index?username=" + '${username}');
-        $("#user_settings").attr("href", "/user/settings?username=" + '${username}');
-    });
-</script>
 <!-- 导航栏 -->
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
