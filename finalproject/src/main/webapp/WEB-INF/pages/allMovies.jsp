@@ -44,8 +44,8 @@
         <div id="navbar" class="navbar-collapse collapse">
 
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/">首页</a></li>
-                <li><a href="/movies?pageNo=1&pageSize=2">电影</a></li>
+                <li><a href="/">首页</a></li>
+                <li class="active"><a href="/movies?pageNo=1&pageSize=2">电影</a></li>
                 <li><a href="/cinemas?pageNo=1&pageSize=2">影院</a></li>
             </ul>
 
@@ -91,12 +91,15 @@
                     <div  class="item movie-poster">
                         <span><img src="${movie.posterUrl}" width="120px" height="165px"/></span>
                     </div>
-                    <div  class="item movie-name">
-                        <span>${movie.movieName}</span>
+                    <div class="item movie-nameAndDescription">
+                        <div  class="item movie-name">
+                            <span>${movie.movieName}</span>
+                        </div>
+                        <div  class="item movie-description">
+                            <span class="word">电影详情：</span><span>${movie.description}</span>
+                        </div>
                     </div>
-                    <div  class="item movie-description">
-                        <span>${movie.description}</span>
-                    </div>
+
                 </li>
             </c:forEach>
         </ul>
