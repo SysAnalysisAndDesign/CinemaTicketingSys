@@ -29,6 +29,7 @@
     <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
     <script src="/static/bootstrap/js/bootstrap.min.js"></script>
     <script src="/static/scripts/jquery.twbsPagination.js"></script>
+    <script src="/static/scripts/public.js"></script>
 
     <title>首页</title>
 
@@ -36,7 +37,9 @@
 <body>
 
 <style>
-
+    .container-cinema {
+        margin-top: 100px;
+    }
 </style>
 
 <script>
@@ -65,16 +68,15 @@
 
             <ul class="nav navbar-nav">
                 <li class="active"><a href="/">首页</a></li>
-                <li><a href="/movies?pageNo=1&pageSize=2">电影</a></li>
+                <li><a href="/cinemas?pageNo=1&pageSize=2">电影</a></li>
                 <li><a href="/cinemas?pageNo=1&pageSize=2">影院</a></li>
-                <li><a href="/syllabus">个人中心</a></li>
             </ul>
 
 
             <ul class="nav navbar-nav navbar-right ">
                 <c:choose>
                     <c:when test="${pageContext.request.userPrincipal.authenticated}">
-                        <li><a href="/index">${pageContext.request.userPrincipal.name}</a></li>
+                        <li><a id="user_index" href="#">${pageContext.request.userPrincipal.name}</a></li>
                         <li><a href="/j_spring_security_logout">logout</a></li>
                     </c:when>
                     <c:otherwise>
@@ -96,29 +98,14 @@
     </div>
 </nav>
 
-
-<script>
-    <%-- 搜索框 --%>
-    $(document).ready(function () {
-        $("#search_btn").click(function () {
-            var search_text = $("#search_text").val();
-            window.location.href = "/search?vague_name=" + search_text;
-        });
-        $("#search_text").keydown(function (e) {
-            if (e.keyCode == 13) {
-                var search_text = $(this).val();
-                window.location.href = "/search?vague_name=" + search_text;
-            }
-        });
-    });
-</script>
-
 <div class="search-box">
     <form class="searchCinema-form">
         <input class="kw" type="text" maxlength="32" name="kw" placeholder="查找影院" autocomplete="off">
         <button class="submit" type="submit"></button>
     </form>
 </div>
+
+<!-- 分页插件导航栏所用容器 -->
 <div class="container">
     <div class="container-cinema">
         <ul class="cinema-list">
@@ -169,6 +156,7 @@
     <p>Clown-Movie版权所有</p>
 </div>
 
+<!-- 分页插件js脚本 -->
 <script type="text/javascript">
     $(function () {
         $('#pagination').twbsPagination({
@@ -187,6 +175,7 @@
     });
 </script>
 
+<!-- 每个影院的点击跳转函数 -->
 <script type="text/javascript">
     $(document).ready(function () {
         $("ul li").click(function () {
