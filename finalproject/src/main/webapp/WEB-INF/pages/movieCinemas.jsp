@@ -16,7 +16,7 @@
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="/static/css/public.css">
     <!-- TODO movieCinemas的css文件 -->
-
+    <link rel="stylesheet" href="/static/css/movieCinemas.css">
     <!-- 可选的Bootstrap主题文件（一般不用引入） -->
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
@@ -90,16 +90,44 @@
     </div>
 </nav>
 
-<%--
-<table id="movieCinemas">
-    放映该影片的影院：
-    <tr id="${movie.cinema.cinemaId}">
-        <td align="center">${movie.cinema.cinemaName}</td>
-        <td align="center">${movie.cinema.address}</td>
-        <td align="center">${movie.cinema.description}</td>
-    </tr>
-</table>
---%>
+<div class="blank"> </div>
+
+<%-- 容器 --%>
+<div class="container">
+    <div class="container-movieCinema">
+        <div class="leading">
+            <span>放映该影片的影院：</span>
+        </div>
+        <div class="movieCinema-header">
+            <div class="item header-name">
+                <span>影院</span>
+            </div>
+            <div class="item header-address">
+                <span>地址</span>
+            </div>
+            <div  class="item header-rate">
+                <span>用户评分</span>
+            </div>
+        </div>
+
+        <%-- 只有一家影院对应…不知道是未完成功能还是简化功能 --%>
+        <div id="movieCinemas" class="movieCinema">
+            <div id="${movie.cinema.cinemaId}">
+                <div  class="item cinema-name">
+                    <span>${movie.cinema.cinemaName}</span>
+                </div>
+                <div class="item cinema-address">
+                    <span>${movie.cinema.address}</span>
+                </div>
+                <div  class="item cinema-rate">
+                    <span>${movie.cinema.description}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
 
 <div class="bottom">
     <p>本页面由Clown-Movie制作</p>

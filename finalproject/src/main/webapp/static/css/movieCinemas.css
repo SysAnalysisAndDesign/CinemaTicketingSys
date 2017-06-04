@@ -1,0 +1,94 @@
+.blank {
+    height: 200px;
+    background: #e5e5e5;
+    padding-bottom: 60px;
+    margin-bottom: -60px;
+}
+
+.container {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.container-movieCinema {
+    width: 950px;
+    margin: 80px auto 0 auto;
+}
+
+.leading {
+    font-size: 26px;
+    color: #222222;
+    margin-bottom: 50px;
+}
+
+.movieCinema-header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.header-name {
+    display: inline-block;
+    width: 300px;
+    text-align: center;
+    font-size: 26px;
+    color: #333333;
+    white-space: nowrap;
+}
+
+.header-address {
+    width: 300px;
+    display: inline-block;
+    font-size: 26px;
+    text-align: center;
+    color: #333333;
+    white-space: nowrap;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+}
+
+.header-rate {
+    width: 300px;
+    display: inline-block;
+    text-align: center;
+    font-size: 26px;
+    color: #333333;
+}
+
+.movieCinema {
+    border-bottom: 1px solid #e5e5e5;
+    cursor: pointer;
+}
+
+.cinema-name {
+    width: 300px;
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 26px;
+    color: #555555;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.cinema-address {
+    width: 300px;
+    display: inline-block;
+    text-align: center;
+    font-size: 26px;
+    margin-top: 5px;
+    color: #555555;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    overflow: hidden;
+}
+
+.cinema-rate {
+    width: 300px;
+    display: inline-block;
+    text-align: center;
+    font-size: 26px;
+    color: #FF7F50;
+    overflow: hidden;
+}
