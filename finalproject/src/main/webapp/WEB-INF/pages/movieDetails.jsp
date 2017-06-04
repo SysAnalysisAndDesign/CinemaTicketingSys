@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="/static/css/movieDetails.css">
     <!-- 可选的Bootstrap主题文件（一般不用引入） -->
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-theme.css">
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
     <script src="/static/scripts/jquery-3.1.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"
