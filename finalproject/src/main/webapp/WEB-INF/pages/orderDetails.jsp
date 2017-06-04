@@ -130,8 +130,8 @@
      用json传给后台
  -->
 <script type="text/javascript">
-    $(document).ready(function () {
-        $("#pay").click(function () {
+    $(document).ready(function() {
+        $("#pay").click(function() {
             var newOrder = new Object();
             newOrder.cinemaName = "${movie.cinema.cinemaName}";
             newOrder.movieName = "${movie.movieName}";
@@ -143,9 +143,10 @@
             $.ajax(
                 {
                     async: "false",
-                    type: 'post',
+
+                    type:'post',
                     url: "http://localhost:8080/order.do",
-                    data: {newOrder: JSON.stringify(orderArray)},
+                    data: { newOrder: JSON.stringify(orderArray) },
                     dataType: "json"
                 }
             );
