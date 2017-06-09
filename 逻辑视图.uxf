@@ -5,7 +5,7 @@
     <id>UMLPackage</id>
     <coordinates>
       <x>715</x>
-      <y>99</y>
+      <y>275</y>
       <w>814</w>
       <h>121</h>
     </coordinates>
@@ -16,7 +16,7 @@
     <id>Relation</id>
     <coordinates>
       <x>583</x>
-      <y>154</y>
+      <y>330</y>
       <w>165</w>
       <h>44</h>
     </coordinates>
@@ -28,7 +28,7 @@
     <id>UMLPackage</id>
     <coordinates>
       <x>715</x>
-      <y>275</y>
+      <y>451</y>
       <w>814</w>
       <h>121</h>
     </coordinates>
@@ -39,7 +39,7 @@
     <id>UMLPackage</id>
     <coordinates>
       <x>726</x>
-      <y>308</y>
+      <y>484</y>
       <w>110</w>
       <h>77</h>
     </coordinates>
@@ -52,7 +52,7 @@ Services</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>858</x>
-      <y>308</y>
+      <y>484</y>
       <w>110</w>
       <h>77</h>
     </coordinates>
@@ -65,7 +65,7 @@ Services</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>990</x>
-      <y>308</y>
+      <y>484</y>
       <w>110</w>
       <h>77</h>
     </coordinates>
@@ -78,7 +78,7 @@ Services</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>1122</x>
-      <y>308</y>
+      <y>484</y>
       <w>110</w>
       <h>77</h>
     </coordinates>
@@ -91,7 +91,7 @@ Services</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>715</x>
-      <y>473</y>
+      <y>649</y>
       <w>803</w>
       <h>121</h>
     </coordinates>
@@ -102,7 +102,7 @@ Services</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>726</x>
-      <y>506</y>
+      <y>682</y>
       <w>110</w>
       <h>77</h>
     </coordinates>
@@ -115,7 +115,7 @@ DAO</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>858</x>
-      <y>506</y>
+      <y>682</y>
       <w>110</w>
       <h>77</h>
     </coordinates>
@@ -128,7 +128,7 @@ DAO</panel_attributes>
     <id>Text</id>
     <coordinates>
       <x>0</x>
-      <y>781</y>
+      <y>957</y>
       <w>143</w>
       <h>66</h>
     </coordinates>
@@ -141,7 +141,7 @@ style=wordwrap</panel_attributes>
     <id>Text</id>
     <coordinates>
       <x>22</x>
-      <y>242</y>
+      <y>418</y>
       <w>110</w>
       <h>77</h>
     </coordinates>
@@ -154,7 +154,7 @@ style=wordwrap</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>462</x>
-      <y>88</y>
+      <y>264</y>
       <w>176</w>
       <h>506</h>
     </coordinates>
@@ -165,7 +165,7 @@ style=wordwrap</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>484</x>
-      <y>132</y>
+      <y>308</y>
       <w>110</w>
       <h>77</h>
     </coordinates>
@@ -178,7 +178,7 @@ Spring MVC</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>825</x>
-      <y>143</y>
+      <y>319</y>
       <w>88</w>
       <h>55</h>
     </coordinates>
@@ -190,7 +190,7 @@ Register</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>990</x>
-      <y>506</y>
+      <y>682</y>
       <w>110</w>
       <h>77</h>
     </coordinates>
@@ -203,7 +203,7 @@ DAO</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>1122</x>
-      <y>506</y>
+      <y>682</y>
       <w>110</w>
       <h>77</h>
     </coordinates>
@@ -216,7 +216,7 @@ DAO</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>1243</x>
-      <y>308</y>
+      <y>484</y>
       <w>110</w>
       <h>77</h>
     </coordinates>
@@ -229,7 +229,7 @@ Services</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>1375</x>
-      <y>308</y>
+      <y>484</y>
       <w>110</w>
       <h>77</h>
     </coordinates>
@@ -242,7 +242,7 @@ Services</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>1254</x>
-      <y>506</y>
+      <y>682</y>
       <w>110</w>
       <h>77</h>
     </coordinates>
@@ -255,7 +255,7 @@ DAO</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>1386</x>
-      <y>506</y>
+      <y>682</y>
       <w>110</w>
       <h>77</h>
     </coordinates>
@@ -268,7 +268,7 @@ DAO</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>726</x>
-      <y>143</y>
+      <y>319</y>
       <w>88</w>
       <h>55</h>
     </coordinates>
@@ -280,7 +280,7 @@ Login</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>1067</x>
-      <y>143</y>
+      <y>319</y>
       <w>88</w>
       <h>55</h>
     </coordinates>
@@ -293,7 +293,7 @@ cinema</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>946</x>
-      <y>143</y>
+      <y>319</y>
       <w>88</w>
       <h>55</h>
     </coordinates>
@@ -306,7 +306,7 @@ Movie</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>1166</x>
-      <y>143</y>
+      <y>319</y>
       <w>132</w>
       <h>55</h>
     </coordinates>
@@ -317,8 +317,8 @@ Make Comments</panel_attributes>
   <element>
     <id>UMLPackage</id>
     <coordinates>
-      <x>1331</x>
-      <y>143</y>
+      <x>1353</x>
+      <y>319</y>
       <w>88</w>
       <h>55</h>
     </coordinates>
@@ -331,7 +331,7 @@ Order</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>770</x>
-      <y>187</y>
+      <y>363</y>
       <w>44</w>
       <h>165</h>
     </coordinates>
@@ -343,7 +343,7 @@ Order</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>792</x>
-      <y>187</y>
+      <y>363</y>
       <w>99</w>
       <h>165</h>
     </coordinates>
@@ -355,7 +355,7 @@ Order</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1100</x>
-      <y>187</y>
+      <y>363</y>
       <w>88</w>
       <h>143</h>
     </coordinates>
@@ -367,7 +367,7 @@ Order</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>979</x>
-      <y>187</y>
+      <y>363</y>
       <w>88</w>
       <h>165</h>
     </coordinates>
@@ -379,7 +379,7 @@ Order</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1221</x>
-      <y>187</y>
+      <y>363</y>
       <w>220</w>
       <h>143</h>
     </coordinates>
@@ -391,31 +391,31 @@ Order</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>924</x>
-      <y>187</y>
-      <w>451</w>
+      <y>363</y>
+      <w>473</w>
       <h>165</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 </panel_attributes>
-    <additional_attributes>390.0;10.0;10.0;130.0</additional_attributes>
+    <additional_attributes>410.0;10.0;10.0;130.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1287</x>
-      <y>187</y>
-      <w>88</w>
+      <y>363</y>
+      <w>110</w>
       <h>143</h>
     </coordinates>
     <panel_attributes>lt=.&gt;
 </panel_attributes>
-    <additional_attributes>60.0;10.0;10.0;110.0</additional_attributes>
+    <additional_attributes>80.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>1155</x>
-      <y>187</y>
+      <y>363</y>
       <w>99</w>
       <h>143</h>
     </coordinates>
@@ -427,7 +427,7 @@ Order</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1034</x>
-      <y>187</y>
+      <y>363</y>
       <w>220</w>
       <h>165</h>
     </coordinates>
@@ -439,7 +439,7 @@ Order</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>781</x>
-      <y>374</y>
+      <y>550</y>
       <w>33</w>
       <h>176</h>
     </coordinates>
@@ -451,7 +451,7 @@ Order</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>913</x>
-      <y>374</y>
+      <y>550</y>
       <w>33</w>
       <h>176</h>
     </coordinates>
@@ -463,7 +463,7 @@ Order</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1045</x>
-      <y>374</y>
+      <y>550</y>
       <w>33</w>
       <h>176</h>
     </coordinates>
@@ -475,7 +475,7 @@ Order</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1177</x>
-      <y>374</y>
+      <y>550</y>
       <w>33</w>
       <h>176</h>
     </coordinates>
@@ -487,7 +487,7 @@ Order</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1287</x>
-      <y>374</y>
+      <y>550</y>
       <w>33</w>
       <h>154</h>
     </coordinates>
@@ -499,7 +499,7 @@ Order</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>1419</x>
-      <y>374</y>
+      <y>550</y>
       <w>33</w>
       <h>154</h>
     </coordinates>
@@ -511,7 +511,7 @@ Order</panel_attributes>
     <id>UMLPackage</id>
     <coordinates>
       <x>484</x>
-      <y>495</y>
+      <y>671</y>
       <w>110</w>
       <h>77</h>
     </coordinates>
@@ -524,7 +524,7 @@ hibernate</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>583</x>
-      <y>528</y>
+      <y>704</y>
       <w>165</w>
       <h>44</h>
     </coordinates>
