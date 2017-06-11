@@ -1,0 +1,535 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>11</zoom_level>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>715</x>
+      <y>99</y>
+      <w>814</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>Web Layer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>583</x>
+      <y>154</y>
+      <w>165</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>715</x>
+      <y>275</y>
+      <w>814</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>Services Layer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>726</x>
+      <y>308</y>
+      <w>110</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>User
+--
+Services</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>858</x>
+      <y>308</y>
+      <w>110</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Order
+--
+Services</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>990</x>
+      <y>308</y>
+      <w>110</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Movie
+--
+Services</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1122</x>
+      <y>308</y>
+      <w>110</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Cinema
+--
+Services</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>715</x>
+      <y>473</y>
+      <w>803</w>
+      <h>121</h>
+    </coordinates>
+    <panel_attributes>Reposities Layer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>726</x>
+      <y>506</y>
+      <w>110</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>User
+--
+DAO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>858</x>
+      <y>506</y>
+      <w>110</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Order
+--
+DAO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>0</x>
+      <y>781</y>
+      <w>143</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>REST
+JSON,XML,YAML
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Text</id>
+    <coordinates>
+      <x>22</x>
+      <y>242</y>
+      <w>110</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>MVC
+
+style=wordwrap</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>462</x>
+      <y>88</y>
+      <w>176</w>
+      <h>506</h>
+    </coordinates>
+    <panel_attributes>Tech Support Layer</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>484</x>
+      <y>132</y>
+      <w>110</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>MVC
+--
+Spring MVC</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>825</x>
+      <y>143</y>
+      <w>88</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>--
+Register</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>990</x>
+      <y>506</y>
+      <w>110</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Movie
+--
+DAO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1122</x>
+      <y>506</y>
+      <w>110</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Cinema
+--
+DAO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1243</x>
+      <y>308</y>
+      <w>110</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Brought Seat
+--
+Services</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1375</x>
+      <y>308</y>
+      <w>110</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Comment
+--
+Services</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1254</x>
+      <y>506</y>
+      <w>110</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Brought Seat
+--
+DAO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1386</x>
+      <y>506</y>
+      <w>110</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Comment
+--
+DAO</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>726</x>
+      <y>143</y>
+      <w>88</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>--
+Login</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1067</x>
+      <y>143</y>
+      <w>88</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>--
+Choose a 
+cinema</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>946</x>
+      <y>143</y>
+      <w>88</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>--
+Choose a
+Movie</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1166</x>
+      <y>143</y>
+      <w>132</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>--
+Make Comments</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>1331</x>
+      <y>143</y>
+      <w>88</w>
+      <h>55</h>
+    </coordinates>
+    <panel_attributes>--
+Comfirm a 
+Order</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>770</x>
+      <y>187</y>
+      <w>44</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;20.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>792</x>
+      <y>187</y>
+      <w>99</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1100</x>
+      <y>187</y>
+      <w>88</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>979</x>
+      <y>187</y>
+      <w>88</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;60.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1221</x>
+      <y>187</y>
+      <w>220</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;180.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>924</x>
+      <y>187</y>
+      <w>451</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>390.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1287</x>
+      <y>187</y>
+      <w>88</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>60.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1155</x>
+      <y>187</y>
+      <w>99</w>
+      <h>143</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1034</x>
+      <y>187</y>
+      <w>220</w>
+      <h>165</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>180.0;10.0;10.0;130.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>781</x>
+      <y>374</y>
+      <w>33</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>913</x>
+      <y>374</y>
+      <w>33</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1045</x>
+      <y>374</y>
+      <w>33</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1177</x>
+      <y>374</y>
+      <w>33</w>
+      <h>176</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1287</x>
+      <y>374</y>
+      <w>33</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1419</x>
+      <y>374</y>
+      <w>33</w>
+      <h>154</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;120.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLPackage</id>
+    <coordinates>
+      <x>484</x>
+      <y>495</y>
+      <w>110</w>
+      <h>77</h>
+    </coordinates>
+    <panel_attributes>Persistence
+--
+hibernate</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>583</x>
+      <y>528</y>
+      <w>165</w>
+      <h>44</h>
+    </coordinates>
+    <panel_attributes>lt=.&gt;
+</panel_attributes>
+    <additional_attributes>130.0;20.0;10.0;20.0</additional_attributes>
+  </element>
+</diagram>

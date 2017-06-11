@@ -1,0 +1,16 @@
+.order-wrapper {
+    width: 100%;
+}
+
+.order-info {
+    width: 500px;
+    margin: 150px auto 100px auto;
+    background: #dddddd;
+    text-align: center;
+    padding: 20px;
+}
+
+.order-info p, tr{
+    font-size: 18px;
+    margin-bottom: 10px;
+}
