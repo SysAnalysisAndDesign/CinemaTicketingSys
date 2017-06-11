@@ -27,7 +27,7 @@
 
 <body>
 
-<!-- 导航栏 -->
+<%-- 导航栏 --%>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
 
@@ -45,9 +45,10 @@
         <div id="navbar" class="navbar-collapse collapse">
 
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/">首页</a></li>
-                <li><a href="/movies?pageNo=1&pageSize=2">电影</a></li>
+                <li><a href="/">首页</a></li>
+                <li class="active"><a href="/movies?pageNo=1&pageSize=2">电影</a></li>
                 <li><a href="/cinemas?pageNo=1&pageSize=2">影院</a></li>
+                <li><a href="/syllabus">个人中心</a></li>
             </ul>
 
 
@@ -83,7 +84,7 @@
     </form>
 </div>
 
-<!-- TODO 修改class名字 css等 -->
+<%-- 分页插件导航栏所用容器 --%>
 <div class="container">
     <div class="container-movie">
         <ul class="movie-list">
@@ -92,12 +93,15 @@
                     <div  class="item movie-poster">
                         <span><img src="${movie.posterUrl}" width="120px" height="165px"/></span>
                     </div>
-                    <div  class="item movie-name">
-                        <span>${movie.movieName}</span>
+                    <div class="item movie-nameAndDescription">
+                        <div  class="item movie-name">
+                            <span>${movie.movieName}</span>
+                        </div>
+                        <div  class="item movie-description">
+                            <span class="word">电影详情：</span><span>${movie.description}</span>
+                        </div>
                     </div>
-                    <div  class="item movie-description">
-                        <span>${movie.description}</span>
-                    </div>
+
                 </li>
             </c:forEach>
         </ul>
@@ -110,6 +114,13 @@
     </div>
 </div>
 
+<div class="bottom">
+    <p>本页面由Clown-Movie制作</p>
+    <p>www.Clown-Movie.com.cn</p>
+    <p>Clown-Movie版权所有</p>
+</div>
+
+<%-- 分页插件js脚本 --%>
 <script type="text/javascript">
     $(function () {
         $('#pagination').twbsPagination({
@@ -122,36 +133,13 @@
             initiateStartPageClick: false,
             startPage: ${moviePage.currPage},
             onPageClick: function (event, page) {
-                window.location.href="http://localhost:8080/movies?pageNo=" + page + "&pageSize=2";
+                window.location.href = "http://localhost:8080/movies?pageNo=" + page + "&pageSize=2";
             }
         });
     });
 </script>
 
-<div class="bottom">
-    <p>本页面由Clown-Movie制作</p>
-    <p>www.Clown-Movie.com.cn</p>
-    <p>Clown-Movie版权所有</p>
-</div>
-
-<script type="text/javascript">
-    $(function () {
-        $('#pagination').twbsPagination({
-            totalPages: ${cinemaPage.totalPage},
-            visiblePages: 5,
-            first: "首页",
-            prev: "上一页",
-            next: "下一页",
-            last: "末页",
-            initiateStartPageClick: false,
-            startPage: ${cinemaPage.currPage},
-            onPageClick: function (event, page) {
-                window.location.href = "http://localhost:8080/cinemas?pageNo=" + page + "&pageSize=2";
-            }
-        });
-    });
-</script>
-
+<%-- 每个电影的点击跳转函数 --%>
 <script type="text/javascript">
     $(document).ready(function(){
         $("ul li").click(function(){

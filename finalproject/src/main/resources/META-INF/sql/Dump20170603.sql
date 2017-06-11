@@ -119,7 +119,13 @@ CREATE TABLE `movie` (
   `description` tinytext CHARACTER SET gb2312,
   `price` double DEFAULT NULL,
   `cinema_id` int(11) DEFAULT NULL,
-  `poster_url` varchar(45) DEFAULT NULL,
+  `poster_url` varchar(45) CHARACTER SET gb2312 DEFAULT NULL,
+  `director` varchar(45) CHARACTER SET gb2312 DEFAULT NULL,
+  `cast` varchar(100) CHARACTER SET gb2312 DEFAULT NULL,
+  `type` varchar(45) CHARACTER SET gb2312 DEFAULT NULL,
+  `region` varchar(45) CHARACTER SET gb2312 DEFAULT NULL,
+  `language` varchar(45) CHARACTER SET gb2312 DEFAULT NULL,
+  `length` int(11) DEFAULT NULL,
   PRIMARY KEY (`movie_id`),
   KEY `cinema_id_idx` (`cinema_id`),
   CONSTRAINT `FKcxqqfikr2t9yv97cd1lgyikv7` FOREIGN KEY (`cinema_id`) REFERENCES `cinema` (`cinema_id`),
@@ -133,7 +139,7 @@ CREATE TABLE `movie` (
 
 LOCK TABLES `movie` WRITE;
 /*!40000 ALTER TABLE `movie` DISABLE KEYS */;
-INSERT INTO `movie` VALUES (1,'加勒比海盗5','好看',35,1,'/static/images/Caribbean5.jpeg'),(2,'摔跤吧爸爸','好看',35,1,'/static/images/dangle.jpeg'),(3,'荡寇风云','好看',35,2,'/static/images/dkfy.jpeg'),(4,'三只小猪2','不看',35,2,'/static/images/3pigs.jpeg');
+INSERT INTO `movie` VALUES (1,'加勒比海盗5','好看',35,1,'/static/images/Caribbean5.jpeg',NULL,NULL,NULL,NULL,NULL,NULL),(2,'摔跤吧爸爸','好看',35,1,'/static/images/dangle.jpeg',NULL,NULL,NULL,NULL,NULL,NULL),(3,'荡寇风云','好看',35,2,'/static/images/dkfy.jpeg',NULL,NULL,NULL,NULL,NULL,NULL),(4,'三只小猪2','不看',35,2,'/static/images/3pigs.jpeg',NULL,NULL,NULL,NULL,NULL,NULL);
 /*!40000 ALTER TABLE `movie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -242,4 +248,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2017-05-30 16:33:58
+-- Dump completed on 2017-06-03 13:39:07

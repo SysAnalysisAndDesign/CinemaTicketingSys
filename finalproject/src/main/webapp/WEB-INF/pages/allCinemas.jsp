@@ -36,13 +36,14 @@
 </head>
 <body>
 
-<style>
-    .container-cinema {
-        margin-top: 100px;
-    }
-</style>
-
-<!-- 导航栏 -->
+<script>
+    <%-- 导航栏 --%>
+    $(document).ready(function () {
+        $("#user_index").attr("href", "/user/index?username=" + '${username}');
+        $("#user_settings").attr("href", "/user/settings?username=" + '${username}');
+    });
+</script>
+<%-- 导航栏 --%>
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
 
@@ -60,9 +61,10 @@
         <div id="navbar" class="navbar-collapse collapse">
 
             <ul class="nav navbar-nav">
-                <li class="active"><a href="/">首页</a></li>
+                <li><a href="/">首页</a></li>
                 <li><a href="/movies?pageNo=1&pageSize=2">电影</a></li>
-                <li><a href="/cinemas?pageNo=1&pageSize=2">影院</a></li>
+                <li class="active"><a href="/cinemas?pageNo=1&pageSize=2">影院</a></li>
+                <li><a href="/syllabus">个人中心</a></li>
             </ul>
 
 
@@ -98,7 +100,7 @@
     </form>
 </div>
 
-<!-- 分页插件导航栏所用容器 -->
+<%-- 分页插件导航栏所用容器 --%>
 <div class="container">
     <div class="container-cinema">
         <ul class="cinema-list">
@@ -149,7 +151,7 @@
     <p>Clown-Movie版权所有</p>
 </div>
 
-<!-- 分页插件js脚本 -->
+<%-- 分页插件js脚本 --%>
 <script type="text/javascript">
     $(function () {
         $('#pagination').twbsPagination({
@@ -168,7 +170,7 @@
     });
 </script>
 
-<!-- 每个影院的点击跳转函数 -->
+<%-- 每个影院的点击跳转函数 --%>
 <script type="text/javascript">
     $(document).ready(function () {
         $("ul li").click(function () {
