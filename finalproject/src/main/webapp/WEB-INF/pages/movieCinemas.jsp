@@ -16,6 +16,7 @@
     <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="/static/css/public.css">
     <link rel="stylesheet" href="/static/css/movieCinemas.css">
+    <%--<link rel="stylesheet" href="/static/css/movieDetails.css">--%>
     <!-- 可选的Bootstrap主题文件（一般不用引入） -->
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
     <!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
@@ -89,9 +90,58 @@
     </div>
 </nav>
 
-<div class="blank"> </div>
+<div class="content">
+    <div class="detail-wrap">
+        <div class="detail-cont">
+            <h3 class="cont-title">${movie.movieName}</h3>
+            <div class="float-cont">
+                <div class="cont-img">
+                    <img src="${movie.posterUrl}">
+                </div>
+                <ul class="cont-info">
+                    <li>导演：${movie.director}</li>
+                    <li>主演：${movie.cast}</li>
+                    <li>类型：${movie.type}</li>
+                    <li>制片国家/地区：${movie.region}</li>
+                    <li>语言：${movie.language}</li>
+                    <li>片长：${movie.length}</li>
+                    <li>简介：${movie.description}</li>
+                </ul>
+            </div>
 
-<%-- 容器 --%>
+        </div>
+    </div>
+    <div class="head center-wrap">
+        <h2>所有场次</h2>
+    </div>
+    <div class="session-wrap center-wrap">
+        <table class="hall-table">
+            <thead>
+            <tr>
+                <th class="hall-name">影院</th>
+                <th class="hall-address">地址</th>
+                <th class="hall-description">用户评价</th>
+                <th class="hall-buy">购票</th>
+            </tr>
+            </thead>
+            <tbody>
+            <%--<c:forEach items="${movie.cinema}" var="cutting">--%>
+                <tr id="${movie.cinema.cinemaId}">
+                    <td class="item-name">${movie.cinema.cinemaName}</td>
+                    <td class="item-address">${movie.cinema.address}</td>
+                    <td class="item-description">${movie.cinema.description}</td>
+                    <td class="item-buy">
+                        <a class="buy-btn" href="/movies/${movie.movieId}">购票</a>
+                    </td>
+                </tr>
+            <%--</c:forEach>--%>
+            </tbody>
+
+        </table>
+    </div>
+</div>
+
+<%--&lt;%&ndash; 容器 &ndash;%&gt;
 <div class="container">
     <div class="container-movieCinema">
         <div class="leading">
@@ -109,7 +159,7 @@
             </div>
         </div>
 
-        <%-- 只有一家影院对应…不知道是未完成功能还是简化功能 --%>
+        &lt;%&ndash; 只有一家影院对应…不知道是未完成功能还是简化功能 &ndash;%&gt;
         <div id="movieCinemas" class="movieCinema">
             <div id="${movie.cinema.cinemaId}">
                 <div  class="item cinema-name">
@@ -125,7 +175,7 @@
         </div>
     </div>
 
-</div>
+</div>--%>
 
 
 <div class="bottom">
