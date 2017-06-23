@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- 新 Bootstrap 核心 CSS 文件 -->
     <link rel="stylesheet" href="/static/css/public.css">
+    <link rel="stylesheet" href="/static/css/index.css">
     <!-- 可选的Bootstrap主题文件（一般不用引入） -->
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="/static/bootstrap/css/bootstrap-theme.css">
@@ -33,7 +34,6 @@
 <!-- 导航栏 -->
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container">
-
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
                     aria-expanded="false" aria-controls="navbar">
@@ -80,7 +80,7 @@
     </div>
 </nav>
 
-<div id="myCarousel" class="carousel slide" style="margin-top: 51px">
+<div id="myCarousel" class="carousel slide">
     <!-- 轮播（Carousel）指标 -->
     <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -106,6 +106,62 @@
        data-slide="next">&rsaquo;</a>
 </div>
 
+<div class="popular-movies">
+    <div class="container">
+        <div class="heading">
+            <h2>热门电影</h2>
+        </div>
+
+        <div class="info-movies">
+            <div class="row">
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="movie-box box-grey">
+                        <div class="inner">
+                            <h5>加勒比海盗5</h5>
+                            <div class="avatar">
+                                <img src="/static/images/Caribbean5.jpeg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="movie-box box-grey">
+                        <div class="inner">
+                            <h5>三只小猪</h5>
+                            <div class="avatar">
+                                <img src="/static/images/3pigs.jpeg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="movie-box box-grey">
+                        <div class="inner">
+                            <h5>摔跤吧！爸爸</h5>
+                            <div class="avatar">
+                                <img src="/static/images/dangle.jpeg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="movie-box box-grey">
+                        <div class="inner">
+                            <h5>寇荡风云</h5>
+                            <div class="avatar">
+                                <img src="/static/images/dkfy.jpeg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
 
 <div class="bottom">
     <p>本页面由Clown-Movie制作</p>
